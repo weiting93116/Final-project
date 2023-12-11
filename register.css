@@ -1,0 +1,79 @@
+body {
+    font-family: 標楷體;
+}
+
+.register-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    max-width: 1550px;
+    max-height: 770px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.register-photo,
+.register-text {
+    flex: 1;
+    height: 100%;
+}
+
+.register-text {
+    width: 40%;
+    margin-left: 5%;
+}
+
+.register-photo img {
+    width: 100%;
+}
+
+.register-logo img {
+    border-radius: 50%;
+    max-width: 25%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.register-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.set-register {
+    text-align: center;
+    background-color: #a19a78;
+    color: white;
+    font-size: 15px;
+    padding: 9px;
+    margin: 10px auto 0;
+    width: 100px;
+    height: 20px;
+}
+
+.membership-register {
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 10px;
+    width: 500px;
+    height: 370px;
+    margin: 0 auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+form {
+    text-align: left;
+    padding-top: 20px;
+}
+
+form p {
+    text-align: center;
+}

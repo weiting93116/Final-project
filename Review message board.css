@@ -1,0 +1,147 @@
+body {
+    font-family: 微軟正黑體;
+}
+
+.purchase-history {
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+    top: 0;
+    left: 0;
+}
+
+.order-list,
+.rate {
+    text-align: center;
+    background-color: #5C5656;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px auto 0;
+    width: 200px;
+    height: 20px;
+}
+
+
+.member-purchase-history,
+.rating-area {
+    border: 1px solid #000;
+    font-size: 20px;
+    padding: 10px;
+    width: 800px;
+    height: 300px;
+    margin: 0px auto 10px;
+    overflow: auto;
+}
+
+
+.order {
+    padding: 10px;
+    width: 750px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.order-status {
+    background-color: #d39999;
+    color: white;
+}
+
+.order th,
+.order-bottom {
+    text-align: center;
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    background-color: #5C5656;
+    color: white;
+}
+
+.order td {
+    text-align: center;
+}
+
+.goods-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.order img {
+    width: 20%;
+    height: 20%;
+    margin-right: 382px;
+}
+
+.goods-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    text-align: left;
+    white-space: nowrap;
+    transform: translateX(-382px);
+}
+
+
+.rating {
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    transform-origin: center;
+}
+
+.rating-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rating-area p {
+    margin: 0;
+}
+
+.rating input {
+    display: none;
+}
+
+
+.rating label::before {
+    content: "\2605";
+    display: block;
+    position: relative;
+    font-size: 2em;
+    color: #101010;
+}
+
+
+.rating label::after {
+    content: "\2605";
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 2em;
+    color: #F5AB3E;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.rating label:hover::after,
+.rating input:hover~label::after,
+.rating input:checked~label::after {
+    opacity: 1;
+}
+
+
+.rating-area textarea {
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
