@@ -161,12 +161,17 @@ footer {
 
 .personal-information {
     text-align: left;
-    display: flex;
     align-items: center;
     font-size: 25px;
     padding: 30px;
     margin: 0 auto;
 }
+
+.order a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .order,
 .scoring-content {
