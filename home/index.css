@@ -56,8 +56,85 @@ nav a {
 .carousel-container {
     width: 500px;
     overflow: hidden;
-  }
+}
   
 .carousel-slide {
     display: none;
-  }
+}
+
+main {
+    margin: auto;
+    padding: 0;
+}
+
+.find-tea {
+    position: relative;
+    width: 100%;
+}
+
+.find-tea-photo {
+    width: 100%;
+    height: auto;
+}
+
+.find-tea-text {
+    color: black;
+    font-weight: 1000;
+    font-size: 30px;
+    padding: 10px;
+}
+.shoplink {
+    text-decoration: none;
+    background-color: #473E3F;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    padding: 10px;
+}
+
+.About-us {
+    position: relative;
+    width: 100%;
+}
+
+.About-us-title {
+    font-weight: 1000;
+    font-size: 60px;
+    color: orchid;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.About-us-photo {
+    width: 100%;
+    height: auto;
+}
+
+.About-us-text {
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+.About-us-link {
+    text-decoration: none;
+    background-color: orchid;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 25%;
+    left: 45%;
+    padding: 10px;
+}
