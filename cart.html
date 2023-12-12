@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>final</title>
-    <link rel="stylesheet" href="final.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 <body>
     <header>
@@ -28,7 +28,80 @@
     </header>
 
     <main>
-
+        <div class="checkout-container">
+            <div class="step-indicator">
+                <div class="step-circle active">1</div>
+                <div class="step-circle">2</div>
+                <div class="step-circle">3</div>
+            </div>
+    
+            <div id="step1" class="step active">
+                <h2>購物車</h2>
+                <!-- 此處添加購物車的內容-->
+                <div class="goods">
+                    <div>商品</div>
+                    <div>單價</div>
+                    <div>數量</div>
+                    <div>合計</div>
+                    <div>刪除</div>
+                </div>
+                <div class="cart-items" id="cart-items"></div>
+                <div class="cart-total">總金額: $<span id="total-price">0</span></div>
+                <div class="button"><button onclick="nextStep()">下一步</button></div>
+                <script src="cart.js"></script>
+            </div>
+            
+            <div id="step2" class="step">
+                <h2>付款方式</h2>
+                <p>請填寫收件資料</p>
+                <!-- 此處添加確認定單的內容 -->
+                <div>
+                    <p class="Receiving-information">收貨資訊</p>
+                    <div class="cart-Receiving-information">
+                        <span>收件人姓名：</span><input type="text" size="20"><br>
+                        <span>電話：</span><input type="text" size="20"><br>
+                        <span>電子郵件：</span><input type="text" size="20"><br>
+                        <span>取貨方式：</span>
+                        <select>
+                            <option>選項</option>
+                            <option>宅配</option>
+                            <option>貨到付款</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p class="Payment-information">付款資訊</p>
+                    <div class="cart-Payment-information">
+                        <select>
+                            <option>選項</option>
+                            <option>宅配</option>
+                            <option>貨到付款</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p class="Remark">備註</p>
+                    <div class="cart-Remark">
+                        <input type="textarea">
+                    </div>
+                </div>
+                <div class="button">
+                    <button onclick="prevStep()">上一步</button>&nbsp;
+                    <button onclick="nextStep()">下一步</button>
+                </div>
+            </div>
+            
+            <div id="step3" class="step">
+                <h2>確認訂單</h2>
+                <!-- 此處添加付款的內容 -->
+                <div class="button">
+                    <button onclick="prevStep()">上一步</button>&nbsp;
+                    <button onclick="completeCheckout()">完成結帳</button>
+                </div>
+            </div>
+      </div>
+    
+      <script src="pay.js"></script>
     </main>
 
     <footer>
