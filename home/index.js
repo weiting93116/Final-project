@@ -1,13 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var myHeader = document.getElementById("header");
-
-    window.onscroll = function () {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            myHeader.classList.remove("large-header");
-            myHeader.classList.add("small-header");
-        } else {
-            myHeader.classList.remove("small-header");
-            myHeader.classList.add("large-header");
-        }
-    };
-});
+document.addEventListener("DOMContentLoaded", function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+  
+    // Initial display
+    showSlide(currentSlide);
+  
+    // Auto carousel every 3 seconds (adjust as needed)
+    setInterval(nextSlide, 3000);
+  });
