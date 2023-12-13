@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.tab-title {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.tab-title li {
+    margin-right: 20px;
+}
+
+.tab-title a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #292828;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-title a:hover {
+    background-color: rgb(197, 186, 186);
+    color: #000;
+}
+
+.content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#tea-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tea-category {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.tea {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.goods-display {
+    display: flex;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+    height: 250px;
+}
+
+.product img {
+    max-width: 75%;
+    height: auto;
+    margin: 10px;
+}
+
+.product p {
+    line-height: 0.5;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-price {
+    color: green;
+}
