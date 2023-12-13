@@ -14,3 +14,7 @@ function showTab(tabId) {
     document.getElementById(tabId).style.display = 'block';
 }
 
+function addToCart(productName) {
+
+    alert('已加入購物車！\n產品：' + productName);
+}

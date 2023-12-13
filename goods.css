@@ -68,7 +68,7 @@
     text-align: center;
     margin: 10px;
     width: 200px;
-    height: 250px;
+    height: 270px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -92,4 +92,18 @@
 
 .product-price {
     color: green;
+}
+
+.add-to-cart-btn {
+    background-color: #331f10;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #7c7572;
 }
