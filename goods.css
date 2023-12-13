@@ -69,6 +69,11 @@
     margin: 10px;
     width: 200px;
     height: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 .product img {
