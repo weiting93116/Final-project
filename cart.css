@@ -61,6 +61,116 @@ li {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+/*cart*/
+.checkout-container {
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.step-circle.active {
+    background-color: #211E1E;
+    color: #fff;
+}
+
+
+/*步驟一*/
+.goods {
+    background-color: #211E1E;
+    color: white;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-items {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #211E1E;
+}
+
+.cart-item {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+/*步驟二*/
+
+.Receiving-information,
+.Payment-information,
+.Remark {
+    text-align: center;
+    background-color: #5C5656;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px auto 0;
+    width: 200px;
+}
+
+.cart-Receiving-information,
+.cart-Payment-information,
+.cart-Remark {
+    border: 1px solid #000;
+    font-size: 20px;
+    padding: 10px;
+    width: 800px;
+    height: fit-content;
+    margin: 10px auto 50px;
+    border-style: solid;
+}
+
+>>>>>>> 101c19531ae46e2c8089ad9c3deb1a981b0082ff
 /*FOOTER*/
 footer {
     background-color: #211E1E;
