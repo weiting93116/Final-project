@@ -9,14 +9,42 @@
     <script src="good.js"></script>
 </head>
 <body>
-    <div>
-        <img class="slide-active" src="greentea.jpg"/>
-        <img class="slide" src="greentea.jpg"/>
-        <img class="slide" src="greentea.jpg"/>
-        <img class="slide" src="greentea.jpg"/>
-        <a href="javascript:;" class="control-prev"> < </a>
-        <a href="javascript:;" class="control-prev"> > </a>
-        <div class="dots"></div>
+
+    <div class="carousel-container">
+        <div class="thumbnail-container">
+          <img src="greentea.jpg" alt="Thumbnail 1">
+          <img src="greentea.jpg" alt="Thumbnail 2">
+          <img src="greentea.jpg" alt="Thumbnail 3">
+        </div>
+      
+        <div class="carousel">
+          <img class="carousel-item" src="greentea.jpg" alt="Product 1">
+          <img class="carousel-item" src="greentea.jpg" alt="Product 2">
+          <img class="carousel-item" src="greentea.jpg" alt="Product 3">
+        </div>
+      </div>
+      
+      
+    <div class="product-details">
+        <p class="title">產品名稱</p>
+        <div>
+            內含：300g<br>
+            產地：台灣<br>
+            <p>說明：澀中帶苦，但不會太苦，回甘氣息讓人欲罷不能！！</p>
+            <p>價格：$380</p>
+            <p id="stock">庫存: 50</p>
+    
+            <div class="quantity-container">
+                <button class="quantity-btn" id="decrement">-</button>
+                <input type="text" id="quantity" value="1" min="1" max="50">
+                <button class="quantity-btn" id="increment">+</button>
+            </div>
+    
+            <button class="buy-btn">直接購買</button>
+            <button class="cart-btn" id="addToCart">加進購物車</button>
+        </div>
     </div>
+    
+      
 </body>
 </html>

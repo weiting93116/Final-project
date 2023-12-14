@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* 將內容水平置中 */
+    align-items: center;
+    /* 將內容垂直置中 */
+    min-height: 100vh;
+    /* 讓內容至少佔滿整個視窗高度 */
+}
+
+.carousel-container,
+.product-details {
+    width: 50%;
+    /* 調整兩個區塊寬度 */
+    padding: 20px;
+    /* 調整兩個區塊間距 */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.thumbnail-container img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.carousel {
+    width: 300px;
+    /* 輪播圖寬度 */
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.product-details {
+    text-align: right;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.quantity-btn {
+    font-size: 14px;
+}
+
+.title {
+    font-size: 20px;
+}
