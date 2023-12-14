@@ -6,41 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>membership</title>
     <link rel="stylesheet" href="memberships.css">
+    <script src="membership.js" defer></script>
 </head>
 <body>
     <header>
-
-    </header>
-
-        <div class="member-information">|會員資料</div>
-        <div class="information">
-            <div><img src="user.png"></div>
-            <p>帳號名稱：CYCU****</p>
-            <button>＋編輯資料 </button>
+        <div class="logo">
+            <p class="logo_text">找茶<br>FIND &nbsp; TEA</p>
         </div>
-
-        <p class="basic-information">基本資料</p>
-        <div class="basic-text">
-            <div class="personal-information">
-                姓名：<br>
-                性別：<br>
-                生日：<br>
-                電話：<br>
-                地址：<br>
-                電子郵件：<br>
+        <div class="header_list">
+                <li class="header_text">首頁</li>
+                <li class="header_text">商店</li>
+                <li class="header_text">關於我們</li>
+        </div>
+        <div class="cart_and_membership">
+            <div>
+                <p>購物車</p>
+            </div>
+            <div>
+                <p>會員登入/註冊</p>
             </div>
         </div>
+    </header>
+
+    <main>
+        <div class="member-information">|會員資料</div>
+    <div class="information">
+        <div><img src="user.png"></div>
+        <p>帳號名稱：<span id="accountName">CYCU****</span></p>
+        <button onclick="toggleEditMode()">＋編輯資料</button>
+    </div>
+    <p class="basic-information">基本資料</p>
+    <div class="basic-text">
+        <div class="personal-information" id="personalInfo">
+            姓名：<span id="name">John Doe</span><br>
+            性別：<span id="gender">Male</span><br>
+            生日：<span id="birthday">1990-01-01</span><br>
+            電話：<span id="phone">123-456-7890</span><br>
+            地址：<span id="address">123 Main St</span><br>
+            電子郵件：<span id="email">john@example.com</span><br>
+        </div>
+        <div id="editForm" style="display: none;">
+            姓名：<input type="text" id="editName"><br>
+            性別：<input type="text" id="editGender" disabled><br>
+            生日：<input type="text" id="editBirthday" disabled><br>
+            電話：<input type="text" id="editPhone"><br>
+            地址：<input type="text" id="editAddress"><br>
+            電子郵件：<input type="text" id="editEmail"><br>
+            <button onclick="saveChanges()">保存修改</button>
+        </div>
+    </div>
 
         <p class="purchase-history">購買紀錄</p>
         <div class="member-purchase-history">
+            
             <div class="order">
-                訂單編號：<br>
-                訂單金額：<br>
+                <a href="Reviewmessageboard.html">
+                訂單編號：12345678<br>
+                訂單金額：$1000TWD<br>
+                </a>
             </div>
         
             <div class="order">
-                訂單編號：<br>
-                訂單金額：<br>
+                <a href="Reviewmessageboard.html">
+                    訂單編號：12345678<br>
+                    訂單金額：$1000TWD<br>
+                </a>
             </div>
         </div>
 
@@ -48,19 +78,55 @@
         <div class="member-comment-history">
             <div class="scoring-content">
                 評價內容<br>
-                評分：<br>
-                留言：<br>
+                商品：極品綠茶<br>
+                評分：<span class="star-rating">★★★★★</span><br>
+                留言：茶香四溢，清甜回甘，好茶!<br>
             </div>
-
             <div class="scoring-content">
                 評價內容<br>
-                評分：<br>
-                留言：<br>
+                商品：極品綠茶<br>
+                評分： <span class="star-rating">★★★★★</span><br>
+                留言：茶香四溢，清甜回甘，好茶!<br>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="menu">
+            <div class="footer_logo">
+                
+            </div>
+            <div class="web_tags">
+                <p>首頁</p>
+                <li>來找茶</li>
+                <li>團隊</li>
+                <li>熱銷排行</li>
+                <li>找茶具</li>
+                <li>來品茶</li>
+            </div>
+            <div class="web_tags">
+                <p>產品商店</p>
+                <li>茶葉</li>
+                <li>茶具</li>
+                <li>禮盒</li>
+            </div>
+            <div class="web_tags">
+                <p>關於我們</p>
+                <li>前端-甲班</li>
+                <li>後端-乙班</li>
+            </div>
+            <div class="web_tags">
+                <p>購物車/會員</p>
+                <li>購物清單</li>
+                <li>基本資料</li>
+                <li>購買紀錄</li>
+                <li>歷史評價</li>
             </div>
         </div>
 
-    <footer>
-
+        <div class="privacy-policy">
+            <p>隱私權政策@</p>
+        </div>
     </footer>
 
 </body>
