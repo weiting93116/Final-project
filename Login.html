@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>登入</title>
     <link rel="stylesheet" href="Login.css">
+    <script src="Login.js"></script>
 </head>
 <body>
 <div class="login-container">
@@ -20,20 +21,23 @@
             <p>Find tea.</p>
         </div>
 
-        <p class="set-login">會員登入</p>
-        <div class="membership-login">
-            <form method="post" action="">
-                帳號：<input type="text" name="user_name" /><br/>
-                密碼：<input type="password" name="password" /><br/>
-                <p><input type="submit" value="登入"/></p>
-            </form>  
-
-            <div class="no-membership">
-                尚未有會員嗎?<br>
-                <a href="register.html">立即註冊</a>
+        <div>
+            <p class="set-login">會員登入</p>
+            <div class="membership-login">
+                <form id="loginForm" method="post" action="">
+                    帳號：<input type="text" name="user_name" placeholder="Account"/>
+                    <br>
+                    密碼：<input type="password" name="password"  placeholder="Password"/>
+                    
+                    <p><input type="submit" value="登入"/></p>
+                </form>  
+    
+                <div class="no-membership">
+                    尚未有會員嗎?<br>
+                    <a href="register.html">立即註冊</a>
+                </div>
             </div>
         </div>
-    </div>
 </div>
 </body>
 </html>

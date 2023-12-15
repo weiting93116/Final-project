@@ -9,7 +9,7 @@ body {
     align-items: center;
     margin: 0;
     max-width: 1550px;
-    max-height: 690px;
+    max-height: 680px;
     padding: 0;
     overflow: hidden;
 }
@@ -68,6 +68,7 @@ body {
 form {
     text-align: center;
 }
+
 
 .no-membership {
     text-align: center;
