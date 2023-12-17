@@ -226,6 +226,11 @@ header {
     padding: 50px;
 }
 
+.card-container a {
+    text-decoration: none;
+    color: #333;
+}
+
 .card {
     width: 200px;
     height: 400px;
@@ -566,6 +571,11 @@ header {
     transition: background-color 0.3s ease;
 }
 
+.teaset-us-btn a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
 .teaset-us-btn:hover {
     background-color: rgb(226, 225, 225);
     color: #211E1E;
@@ -599,7 +609,7 @@ iframe {
     margin: auto;
 }
 
-/*footer*/
+/*FOOTER*/
 footer {
     background-color: #211E1E;
     color: white;
@@ -611,8 +621,14 @@ footer {
 
 .footer_logo {
     width: 20%;
+    margin-left: 50px;
 }
 
+.footer_logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
 
 .menu {
     display: flex;
@@ -623,6 +639,11 @@ footer {
     width: 16%;
     font-size: 10pt;
     padding: 0 2%;
+}
+
+.web_tags a {
+    color: white;
+    text-decoration: none;
 }
 
 .privacy-policy {
