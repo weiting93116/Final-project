@@ -80,28 +80,26 @@ header {
     display: flex;
 }
 
+/*memberships*/
 .member-information {
     padding: 20px;
     font-size: 30px;
     text-align: left;
-    top: 0;
-    left: 0;
 }
 
 .information {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .information img {
     border-radius: 50%;
     max-width: 25%;
-    object-fit: cover;
     display: block;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .information .p {
@@ -111,8 +109,9 @@ header {
 .information button {
     background-color: rgb(95, 93, 93);
     color: white;
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 20px;
+    padding: 5px;
 }
 
 .information button:hover {
@@ -141,7 +140,11 @@ header {
     width: 800px;
     height: 300px;
     margin: 10px auto 50px;
-    border-style: solid;
+}
+
+.modify {
+    font-size: 25px;
+    padding: 30px;
 }
 
 .member-comment-history {

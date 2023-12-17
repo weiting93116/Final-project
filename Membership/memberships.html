@@ -36,32 +36,34 @@
     </header>
 
     <main>
-        <div class="member-information">|會員資料</div>
-    <div class="information">
-        <div><img src="image/user.png"></div>
-        <p>帳號名稱：<span id="accountName">CYCU****</span></p>
-        <button onclick="toggleEditMode()">＋編輯資料</button>
-    </div>
-    <p class="basic-information">基本資料</p>
-    <div class="basic-text">
-        <div class="personal-information" id="personalInfo">
-            姓名：<span id="name">John Doe</span><br>
-            性別：<span id="gender">Male</span><br>
-            生日：<span id="birthday">1990-01-01</span><br>
-            電話：<span id="phone">123-456-7890</span><br>
-            地址：<span id="address">123 Main St</span><br>
-            電子郵件：<span id="email">john@example.com</span><br>
+        <div class="member-information">｜會員資料</div>
+        <div class="information">
+            <div><img src="image/user.png"></div>
+            <p>帳號名稱：<span id="accountName">CYCU****</span></p><br>
+            <button onclick="toggleEditMode()">＋編輯資料</button>
         </div>
-        <div id="editForm" style="display: none;">
-            姓名：<input type="text" id="editName"><br>
-            性別：<input type="text" id="editGender" disabled><br>
-            生日：<input type="text" id="editBirthday" disabled><br>
-            電話：<input type="text" id="editPhone"><br>
-            地址：<input type="text" id="editAddress"><br>
-            電子郵件：<input type="text" id="editEmail"><br>
-            <button onclick="saveChanges()">保存修改</button>
+
+        <p class="basic-information">基本資料</p>
+        <div class="basic-text">
+            <div class="personal-information" id="personalInfo">
+                姓名：<span id="name">John Doe</span><br>
+                性別：<span id="gender">Male</span><br>
+                生日：<span id="birthday">1990-01-01</span><br>
+                電話：<span id="phone">123-456-7890</span><br>
+                地址：<span id="address">123 Main St</span><br>
+                電子郵件：<span id="email">john@example.com</span><br>
+            </div>
+
+            <div class="modify" id="editForm" style="display: none;" >
+                姓名：<input type="text" id="editName"><br>
+                性別：<input type="text" id="editGender" disabled><br>
+                生日：<input type="text" id="editBirthday" disabled><br>
+                電話：<input type="text" id="editPhone"><br>
+                地址：<input type="text" id="editAddress"><br>
+                電子郵件：<input type="text" id="editEmail"><br>
+                <button onclick="saveChanges()">保存修改</button>
+            </div>
         </div>
-    </div>
 
         <p class="purchase-history">購買紀錄</p>
         <div class="member-purchase-history">

@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 標楷體;
     font-size: 20px;
@@ -5,35 +11,27 @@ body {
 
 .login-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0;
-    max-width: 1550px;
-    max-height: 680px;
-    padding: 0;
-    overflow: hidden;
 }
 
 .login-photo,
 .login-text {
     flex: 1;
-    height: 100%;
-}
-
-.login-text {
-    width: 40%;
-    margin-left: 5%;
+    text-align: center;
+    padding: 10px;
 }
 
 .login-photo img {
     width: 100%;
+    height: 700px;
+    object-fit: cover;
 }
 
 .login-logo img {
     border-radius: 50%;
     max-width: 25%;
     object-fit: cover;
-    margin: 0 auto;
+    padding: 10px;
 }
 
 .login-logo {
@@ -41,16 +39,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
 
 .set-login {
     text-align: center;
     background-color: #3D3535;
     color: white;
-    padding: 9px;
-    margin: 10px auto 0;
+    padding: 10px;
+    margin: 20px auto;
     width: 100px;
-    height: 20px;
 }
 
 .membership-login {
@@ -69,6 +67,9 @@ form {
     text-align: center;
 }
 
+.membership-login p {
+    padding: 10px;
+}
 
 .no-membership {
     text-align: center;

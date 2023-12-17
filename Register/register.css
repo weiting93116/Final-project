@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 標楷體;
     font-size: 20px;
@@ -5,35 +11,27 @@ body {
 
 .register-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0;
-    max-width: 1550px;
-    max-height: 770px;
-    padding: 0;
-    overflow: hidden;
 }
 
 .register-photo,
 .register-text {
     flex: 1;
-    height: 100%;
-}
-
-.register-text {
-    width: 40%;
-    margin-left: 5%;
+    text-align: center;
+    padding: 10px;
 }
 
 .register-photo img {
     width: 100%;
+    height: 700px;
+    object-fit: cover;
 }
 
 .register-logo img {
     border-radius: 50%;
     max-width: 25%;
     object-fit: cover;
-    margin: 0 auto;
+    padding: 10px;
 }
 
 .register-logo {
@@ -41,36 +39,36 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
 
 .set-register {
     text-align: center;
     background-color: #a19a78;
     color: white;
-    padding: 9px;
-    margin: 10px auto 0;
+    padding: 10px;
+    margin: 10px auto;
     width: 100px;
-    height: 20px;
 }
 
 .membership-register {
     border: 1px solid black;
-    padding: 10px;
+    padding: 20px;
     width: 500px;
-    height: 370px;
-    margin: 0 auto 10px;
+    height: 300px;
+    margin: 0 auto 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    line-height: 1.4;
 }
 
 form {
     text-align: left;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 form p {
     text-align: center;
+    padding: 10px;
 }
