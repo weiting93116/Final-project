@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找茶</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+ 
+    <header>
+        <div class="logo-text">
+            <p>找<br>茶</p>
+            <img src="../image/teatop.jpg"><br>
+            <p> Find tea</p>
+        </div>
+    </header>
+
+    <nav id="mainNav">
+        <div>
+            <a href="">首頁</a>
+            <a href="Goods/goods.html">產品商店</a>
+            <a href="">購物需知</a>
+        </div>
+        <div class="cart_and_membership">
+            <div class="cartnav">
+                <img src="home/icon/shopping-cart.png">&nbsp;&nbsp;
+                <p>購物車</p>
+            </div>
+            <div class="membershipnav">
+                <img src="home/icon/avatar.png">&nbsp;&nbsp;
+                <p>會員登入/註冊</p>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+
+        <section class="advertise">
+            <div class="carousel-container">
+                <div class="carousel">
+                  <div class="slide">
+                    <img src="../image/1.png" alt="Image 1">
+                  </div>
+                  <div class="slide">
+                    <img src="../image/2.png" alt="Image 2">
+                  </div>
+                  <div class="slide">
+                    <img src="../image/3.png" alt="Image 3">
+                  </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <input type="radio" name="slide" id="radio1" checked>
+                <label for="radio1"></label>
+                <input type="radio" name="slide" id="radio2">
+                <label for="radio2"></label>
+                <input type="radio" name="slide" id="radio3">
+                <label for="radio3"></label>
+              </div>
+        </section>
+
+        <!--來找茶-->
+        <section class="find-tea">
+            <p class="findtea-title">｜來找茶</p>
+           
+            <div class="card-container">
+                <div class="card">
+                    <p>找<br>紅<br>茶<br></p>
+                    <span class="tea-ename">Black tea</span> 
+                    <img src="image/btttt.png" alt="Card 1">
+                </div>
+                <div class="card">
+                    <p>找<br>綠<br>茶<br></p>
+                    <span class="tea-ename">Green tea</span> 
+                    <img src="image/gtnobg.png" alt="Card 2">
+                </div>
+                <div class="card">
+                    <p>找<br>青<br>茶<br></p>
+                    <span class="tea-ename">Blue tea</span> 
+                    <img src="image/bt.png" alt="Card 3">
+                </div>
+            </div>
+            <a href="Goods/goods.html"><button class="find-tea-btn">More →</button></a>
+        </section>
+
+        <!--關於我們-->
+        <section class="about-us">
+            <P class="about-us-title">｜關於我們</P>
+            <div class="about-us-content">
+                我們尋覓的不僅是茶葉，更是一種生活的詩意。<br>
+                每一片茶葉都如詩如畫，縈繞於指尖間，<br>品味著時間的靜好，感受著心靈的深處。<br>
+            </div>
+            <button class="about-us-btn">More →</button>
+        </section>
+
+        <!--熱銷排行-->
+        <section class="hot">
+            <p class="hot-title">｜熱銷排行</p>
+            <div class="product-list">
+                <div class="product">
+                    <img src="image/goods.jpg">
+                    <p class="product-name">經典茶葉禮盒</p>
+                    <p class="product-price">$850</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('經典茶葉禮盒')">加入購物車</button>
+                </div>
+                
+                <div class="product">
+                    <img src="image/two.jpg">
+                    <p class="product-name">茶葉二件套</p>
+                    <p class="product-price">$420</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('茶葉二件套')">加入購物車</button>
+                </div>
+        
+                <div class="product">
+                    <img src="image/five.jpg">
+                    <p class="product-name">極選五茶茶包組</p>
+                    <p class="product-price">$390</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('極選五茶茶包組')">加入購物車</button>
+                </div>
+            </div>
+        </section>
+
+        <!--找茶具-->
+        <section class="find-tea-set">
+            <p class="teaset-title">｜找茶具</p>
+            <div class="tea-set-container">
+                <div class="tea-pot">
+                    <img src="image/teapott.jpg">
+                    <p>找<br>茶<br>壺</p>
+                </div>
+
+                <div class="tea-cup">
+                    <img src="image/cup.jpg">
+                    <p>找<br>茶<br>杯</p>
+                </div>
+                
+                <div class="tea-tool">
+                    <img src="image/tool.jpg">
+                    <p>找<br>套<br>件</p>
+                </div>
+            </div>
+
+            <a href="Goods/goods.html"><button class="teaset-us-btn">More →</button></a>
+        </section>
+
+        <section  class="map">
+            <p class="map-title">｜來品茶</p>
+            <div class="map-photo">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.285849947316!2d121.24176902482964!3d24.956387391413372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346822143c046009%3A0x63e3ef21e3beebac!2z6LOH6KiK566h55CG5a2457O7!5e0!3m2!1szh-TW!2stw!4v1702749893439!5m2!1szh-TW!2stw" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="menu">
+            <div class="footer_logo">
+                
+            </div>
+            <div class="web_tags">
+                <p>首頁</p>
+                <li>來找茶</li>
+                <li>團隊</li>
+                <li>熱銷排行</li>
+                <li>找茶具</li>
+                <li>來品茶</li>
+            </div>
+            <div class="web_tags">
+                <p>產品商店</p>
+                <li>茶葉</li>
+                <li>茶具</li>
+                <li>禮盒</li>
+            </div>
+            <div class="web_tags">
+                <p>關於我們</p>
+                <li>前端-甲班</li>
+                <li>後端-乙班</li>
+            </div>
+            <div class="web_tags">
+                <p>購物車/會員</p>
+                <li>購物清單</li>
+                <li>基本資料</li>
+                <li>購買紀錄</li>
+                <li>歷史評價</li>
+            </div>
+        </div>
+
+        <div class="privacy-policy">
+            <p>隱私權政策@</p>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
