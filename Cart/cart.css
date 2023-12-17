@@ -23,9 +23,6 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 40px;
-    /* position: absolute;
-    top: 35%;
-    left: 40%;*/
 }
 
 .header_text {
@@ -68,6 +65,10 @@ header {
     color: white;
 }
 
+.header_list a {
+    text-decoration: none;
+}
+
 .cart_and_membership img {
     width: 20px;
     height: 20px;
@@ -76,7 +77,6 @@ header {
 .cartnav,
 .membershipnav {
     display: flex;
-    color: white;
 }
 
 
