@@ -9,35 +9,60 @@
     <script src="goods.js"></script>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <a href="../home/index.html"><img src="../image/teatop.jpg"></a>
+            <p class="logo_text">找茶<br>FIND &nbsp; TEA</p>
+        </div>
+        <div class="header_list">
+            <a href="../home/index.html" class="header_text">首頁</a>
+            <a href="../Goods/goods.html" class="header_text">商店</a>
+            <a href="" class="header_text">關於我們</a>
+        </div>
+        <div class="cart_and_membership">
+            <div class="cartnav">
+                <img src="../home/icon/shopping-cart.png">&nbsp;&nbsp;
+                <a href="cart.html">
+                    <p>購物車</p>
+                </a>
+            </div>
+            <div class="membershipnav">
+                <img src="../home/icon/avatar.png">&nbsp;&nbsp;
+                <a href="../Login/Login.html">
+                    <p>會員登入/註冊</p>
+                </a>
+            </div>
+        </div>
+    </header>
 
     <main>
         <div class="container">
-            <ul class="tab-title">
-                <li><a href="#" onclick="showTab('tab01', '茶葉')">茶葉</a></li>
-                <li><a href="#" onclick="showTab('tab02', '茶具')">茶具</a></li>
-                <li><a href="#" onclick="showTab('tab03', '禮盒')">禮盒</a></li>
-            </ul>
-        
+            <div class="tabtitle">
+                <ul class="tab-title">
+                    <li><a href="#" onclick="showTab('tab01', '茶葉')">茶葉</a></li>
+                    <li><a href="#" onclick="showTab('tab02', '茶具')">茶具</a></li>
+                    <li><a href="#" onclick="showTab('tab03', '禮盒')">禮盒</a></li>
+                </ul>
+            </div>
             <div class="content" id="tab01">
                 <div class="tea-category" id="black-tea">
                     <p class="tea">｜紅茶</p>
                     <div class="goods-display">
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="Black Tea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="Black Tea"></a>
                             <p class="product-name">紅茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
         
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="Black Tea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="Black Tea"></a>
                             <p class="product-name">紅茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="Black Tea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="Black Tea"></a>
                             <p class="product-name">紅茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
@@ -49,20 +74,20 @@
                     <p class="tea">｜綠茶</p>
                     <div class="goods-display">
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="greenTea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="greenTea"></a>
                             <p class="product-name">綠茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
         
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="greenTea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="greenTea"></a>
                             <p class="product-name">綠茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="greenTea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="greenTea"></a>
                             <p class="product-name">綠茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
@@ -74,20 +99,20 @@
                     <p class="tea">｜青茶</p>
                     <div class="goods-display">
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="blueTea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="blueTea"></a>
                             <p class="product-name">青茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
         
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="blueTea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="blueTea"></a>
                             <p class="product-name">青茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="blueTea">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="blueTea"></a>
                             <p class="product-name">青茶 A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
@@ -101,20 +126,20 @@
                     <p class="tea">｜茶具</p>
                     <div class="goods-display">
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="tea-set">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="tea-set"></a>
                             <p class="product-name">茶具A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
         
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="tea-set">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="tea-set"></a>
                             <p class="product-name">茶具A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="tea-set">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="tea-set"></a>
                             <p class="product-name">茶具A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
@@ -127,20 +152,20 @@
                     <p class="tea">｜禮盒</p>
                     <div class="goods-display">
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="tea-gift">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="tea-gift"></a>
                             <p class="product-name">禮盒A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
         
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="tea-gift">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="tea-gift"></a>
                             <p class="product-name">禮盒A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
                         </div>
                         <div class="product">
-                            <img src="image/greentea.jpg" alt="tea-gift">
+                            <a href="../Good/good.html"><img src="image/greentea.jpg" alt="tea-gift"></a>
                             <p class="product-name">禮盒A</p>
                             <p class="product-price">$350</p>
                             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
@@ -151,9 +176,42 @@
         </div>
     </main>
 
+    <footer>
+        <div class="menu">
+            <div class="footer_logo">
+                <img src="../image/teatop.jpg">
+            </div>
+            <div class="web_tags">
+                <h2><a href="../home/index.html">首頁</a></h2>
+                <a href="../home/index.html">來找茶</a><br>
+                <a href="../home/index.html">團隊</a><br>
+                <a href="../home/index.html">熱銷排行</a><br>
+                <a href="../home/index.html">找茶具</a><br>
+                <a href="../home/index.html">來品茶</a>
+            </div>
+            <div class="web_tags">
+                <h2><a href="../Goods/goods.html">產品商店</a></h2>
+                <a href="../Goods/goods.html">茶葉</a><br>
+                <a href="">茶具</a><br>
+                <a href="">禮盒</a>
+            </div>
+            <div class="web_tags">
+                <h2><a href="">關於我們</a></h2>
+                <a href="">前端-甲班</a><br>
+                <a href="">後端-乙班</a>
+            </div>
+            <div class="web_tags">
+                <h2><a href="">購物車/會員</a></h2>
+                <a href="">購物清單</a><br>
+                <a href="../Membership/memberships.html">基本資料</a><br>
+                <a href="../Reviewmessage/Reviewmessageboard.html">購買紀錄</a><br>
+                <a href="">歷史評價</a>
+            </div>
+        </div>
 
-
-
-
+        <div class="privacy-policy">
+            <p>隱私權政策@</p>
+        </div>
+    </footer>
 </body>
 </html>
