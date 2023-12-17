@@ -197,8 +197,14 @@ footer {
 
 .footer_logo {
     width: 20%;
+    margin-left: 50px;
 }
 
+.footer_logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
 
 .menu {
     display: flex;
