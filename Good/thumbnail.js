@@ -1,4 +1,4 @@
-const images = ["greentea.jpg", "MoriMaTea.jpg", "teatop.jpg"]; // Add more image URLs as needed
+const images = ["image/greentea.jpg", "image/greentea.jpg", "image/greentea.jpg"]; // Add more image URLs as needed
     let currentImageIndex = 0;
 
     function changeImage(offset) {

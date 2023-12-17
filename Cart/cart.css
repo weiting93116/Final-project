@@ -53,26 +53,22 @@ li {
     height: 100%;
     position: absolute;
     right: 2%;
+    padding: 10px;
+    gap: 10px;
 }
 
 .cart_and_membership p {
-    padding: 10px;
     font-size: 10pt;
 }
 
-#carousel-container {
-    width: 100%;
-    overflow: hidden;
+.cart_and_membership img {
+    width: 20px;
+    height: 20px;
 }
 
-#carousel {
+.cartnav,
+.membershipnav {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
 }
 
 

@@ -68,12 +68,22 @@ header {
     margin-right: 20px;
 }
 
+#mainNav img {
+    width: 20px;
+    height: 20px;
+}
+
 .cart_and_membership {
     position: absolute;
     right: 0;
     display: flex;
     align-items: center;
     margin-right: 40px;
+}
+
+.cartnav,
+.membershipnav {
+    display: flex;
 }
 
 .cart_and_membership>div {
@@ -296,12 +306,11 @@ header {
     padding: 40px 0;
     color: #333;
     height: 650px;
-    margin: 20px;
+    margin: 50px 0px;
     position: relative;
-    background-image: url('about.jpg');
+    background-image: url('image/about.jpg');
     background-size: cover;
     backdrop-filter: blur(10px);
-    height: 650px;
 }
 
 .about-us-title {
