@@ -1,4 +1,86 @@
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Product {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #211E1E;
+    color: white;
+    position: relative;
+    display: flex;
+
+}
+
+.header_list {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.header_text {
+    padding: 0 5%;
+    font-size: 12pt;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    width: 30%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 2%;
+    display: flex;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.logo_text {
+    padding-top: 2%;
+    padding-left: 10%;
+    text-align: left;
+}
+
+.cart_and_membership {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 2%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.cart_and_membership p {
+    font-size: 10pt;
+}
+
+.cart_and_membership img {
+    width: 20px;
+    height: 20px;
+}
+
+.cartnav,
+.membershipnav {
+    display: flex;
+}
+
+
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,10 +89,6 @@ body {
     margin: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
 
 section {
     margin: 40px 10px;
@@ -19,6 +97,7 @@ section {
 
 .product-container {
     display: flex;
+    margin-top: 50px;
 }
 
 #gallery,
@@ -40,8 +119,8 @@ section {
 
 #image-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     margin-bottom: 20px;
 }
@@ -249,10 +328,12 @@ section {
 
 .product-name {
     font-weight: bold;
+    margin: 15px;
 }
 
 .product-price {
     color: green;
+    margin: 15px;
 }
 
 .product:hover {
