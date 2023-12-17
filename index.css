@@ -625,6 +625,10 @@ footer {
     padding: 0 2%;
 }
 
+li {
+    list-style: none;
+}
+
 .privacy-policy {
     width: 100%;
     text-align: center;
