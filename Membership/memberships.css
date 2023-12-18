@@ -8,6 +8,7 @@ main {
     width: 100%;
 }
 
+/*header*/
 header {
     width: 100%;
     height: 90px;
@@ -23,27 +24,30 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 40px;
-    /* position: absolute;
-    top: 35%;
-    left: 40%;*/
 }
 
 .header_text {
     padding: 0 5%;
     font-size: 12pt;
-}
-
-li {
-    list-style: none;
+    color: white;
 }
 
 .logo {
     width: 30%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 2%;
+    display: flex;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
 }
 
 .logo_text {
+    padding-top: 2%;
     padding-left: 10%;
     text-align: left;
 }
@@ -53,70 +57,49 @@ li {
     height: 100%;
     position: absolute;
     right: 2%;
+    padding: 10px;
+    gap: 10px;
 }
 
 .cart_and_membership p {
-    padding: 10px;
     font-size: 10pt;
-}
-
-
-
-/*FOOTER*/
-footer {
-    background-color: #211E1E;
     color: white;
-    width: 100%;
-    height: fit-content;
-    padding: 15px;
-    bottom: 0;
 }
 
-.footer_logo {
-    width: 20%;
+.header_list a {
+    text-decoration: none;
 }
 
+.cart_and_membership img {
+    width: 20px;
+    height: 20px;
+}
 
-.menu {
+.cartnav,
+.membershipnav {
     display: flex;
-    margin: 10px 0;
 }
 
-.web_tags {
-    width: 16%;
-    font-size: 10pt;
-    padding: 0 2%;
-}
-
-.privacy-policy {
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-    font-size: 10pt;
-}
-
+/*memberships*/
 .member-information {
     padding: 20px;
     font-size: 30px;
     text-align: left;
-    top: 0;
-    left: 0;
 }
 
 .information {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .information img {
     border-radius: 50%;
     max-width: 25%;
-    object-fit: cover;
     display: block;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .information .p {
@@ -126,8 +109,9 @@ footer {
 .information button {
     background-color: rgb(95, 93, 93);
     color: white;
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 20px;
+    padding: 5px;
 }
 
 .information button:hover {
@@ -156,7 +140,11 @@ footer {
     width: 800px;
     height: 300px;
     margin: 10px auto 50px;
-    border-style: solid;
+}
+
+.modify {
+    font-size: 25px;
+    padding: 30px;
 }
 
 .member-comment-history {
@@ -209,4 +197,48 @@ footer {
 .star-rating {
     color: gold;
     font-size: 24px;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #211E1E;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    bottom: 0;
+}
+
+.footer_logo {
+    width: 20%;
+    margin-left: 50px;
+}
+
+.footer_logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.menu {
+    display: flex;
+    margin: 10px 0;
+}
+
+.web_tags {
+    width: 16%;
+    font-size: 10pt;
+    padding: 0 2%;
+}
+
+.web_tags a {
+    color: white;
+    text-decoration: none;
+}
+
+.privacy-policy {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 10pt;
 }

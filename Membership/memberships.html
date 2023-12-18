@@ -11,50 +11,59 @@
 <body>
     <header>
         <div class="logo">
+            <a href="../home/index.html"><img src="../image/teatop.jpg"></a>
             <p class="logo_text">找茶<br>FIND &nbsp; TEA</p>
         </div>
         <div class="header_list">
-                <li class="header_text">首頁</li>
-                <li class="header_text">商店</li>
-                <li class="header_text">關於我們</li>
+            <a href="../home/index.html" class="header_text">首頁</a>
+            <a href="../Goods/goods.html" class="header_text">商店</a>
+            <a href="" class="header_text">關於我們</a>
         </div>
         <div class="cart_and_membership">
-            <div>
-                <p>購物車</p>
+            <div class="cartnav">
+                <img src="../home/icon/shopping-cart.png">&nbsp;&nbsp;
+                <a href="cart.html">
+                    <p>購物車</p>
+                </a>
             </div>
-            <div>
-                <p>會員登入/註冊</p>
+            <div class="membershipnav">
+                <img src="../home/icon/avatar.png">&nbsp;&nbsp;
+                <a href="../Login/Login.html">
+                    <p>會員登入/註冊</p>
+                </a>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="member-information">|會員資料</div>
-    <div class="information">
-        <div><img src="image/user.png"></div>
-        <p>帳號名稱：<span id="accountName">CYCU****</span></p>
-        <button onclick="toggleEditMode()">＋編輯資料</button>
-    </div>
-    <p class="basic-information">基本資料</p>
-    <div class="basic-text">
-        <div class="personal-information" id="personalInfo">
-            姓名：<span id="name">John Doe</span><br>
-            性別：<span id="gender">Male</span><br>
-            生日：<span id="birthday">1990-01-01</span><br>
-            電話：<span id="phone">123-456-7890</span><br>
-            地址：<span id="address">123 Main St</span><br>
-            電子郵件：<span id="email">john@example.com</span><br>
+        <div class="member-information">｜會員資料</div>
+        <div class="information">
+            <div><img src="../image/user.png"></div>
+            <p>帳號名稱：<span id="accountName">CYCU****</span></p><br>
+            <button onclick="toggleEditMode()">＋編輯資料</button>
         </div>
-        <div id="editForm" style="display: none;">
-            姓名：<input type="text" id="editName"><br>
-            性別：<input type="text" id="editGender" disabled><br>
-            生日：<input type="text" id="editBirthday" disabled><br>
-            電話：<input type="text" id="editPhone"><br>
-            地址：<input type="text" id="editAddress"><br>
-            電子郵件：<input type="text" id="editEmail"><br>
-            <button onclick="saveChanges()">保存修改</button>
+
+        <p class="basic-information">基本資料</p>
+        <div class="basic-text">
+            <div class="personal-information" id="personalInfo">
+                姓名：<span id="name">John Doe</span><br>
+                性別：<span id="gender">Male</span><br>
+                生日：<span id="birthday">1990-01-01</span><br>
+                電話：<span id="phone">123-456-7890</span><br>
+                地址：<span id="address">123 Main St</span><br>
+                電子郵件：<span id="email">john@example.com</span><br>
+            </div>
+
+            <div class="modify" id="editForm" style="display: none;" >
+                姓名：<input type="text" id="editName"><br>
+                性別：<input type="text" id="editGender" disabled><br>
+                生日：<input type="text" id="editBirthday" disabled><br>
+                電話：<input type="text" id="editPhone"><br>
+                地址：<input type="text" id="editAddress"><br>
+                電子郵件：<input type="text" id="editEmail"><br>
+                <button onclick="saveChanges()">保存修改</button>
+            </div>
         </div>
-    </div>
 
         <p class="purchase-history">購買紀錄</p>
         <div class="member-purchase-history">
@@ -94,33 +103,33 @@
     <footer>
         <div class="menu">
             <div class="footer_logo">
-                
+                <img src="../image/teatop.jpg">
             </div>
             <div class="web_tags">
-                <p>首頁</p>
-                <li>來找茶</li>
-                <li>團隊</li>
-                <li>熱銷排行</li>
-                <li>找茶具</li>
-                <li>來品茶</li>
+                <h2><a href="../home/index.html">首頁</a></h2>
+                <a href="../home/index.html">來找茶</a><br>
+                <a href="../home/index.html">團隊</a><br>
+                <a href="../home/index.html">熱銷排行</a><br>
+                <a href="../home/index.html">找茶具</a><br>
+                <a href="../home/index.html">來品茶</a>
             </div>
             <div class="web_tags">
-                <p>產品商店</p>
-                <li>茶葉</li>
-                <li>茶具</li>
-                <li>禮盒</li>
+                <h2><a href="../Goods/goods.html">產品商店</a></h2>
+                <a href="../Goods/goods.html">茶葉</a><br>
+                <a href="../Goods/goods.html">茶具</a><br>
+                <a href="./Goods/goods.html">禮盒</a>
             </div>
             <div class="web_tags">
-                <p>關於我們</p>
-                <li>前端-甲班</li>
-                <li>後端-乙班</li>
+                <h2><a href="">關於我們</a></h2>
+                <a href="">前端-甲班</a><br>
+                <a href="">後端-乙班</a>
             </div>
             <div class="web_tags">
-                <p>購物車/會員</p>
-                <li>購物清單</li>
-                <li>基本資料</li>
-                <li>購買紀錄</li>
-                <li>歷史評價</li>
+                <h2><a href="">購物車/會員</a></h2>
+                <a href="../Cart/cart.html">購物清單</a><br>
+                <a href="../Membership/memberships.html">基本資料</a><br>
+                <a href="../Reviewmessage/Reviewmessageboard.html">購買紀錄</a><br>
+                <a href="">歷史評價</a>
             </div>
         </div>
 
