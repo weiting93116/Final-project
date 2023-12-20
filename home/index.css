@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
 header {
     height: 800px;
     display: flex;
@@ -613,6 +619,7 @@ iframe {
     margin: auto;
 }
 
+/* 搜尋、回到TOP*/
 #searchbtn {
     position: fixed;
     bottom: 65px;
