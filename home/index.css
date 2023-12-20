@@ -714,9 +714,14 @@ footer {
     padding: 0 2%;
 }
 
+<<<<<<< HEAD:home/index.css
 .web_tags a {
     color: white;
     text-decoration: none;
+=======
+li {
+    list-style: none;
+>>>>>>> 11144117:index.css
 }
 
 .privacy-policy {
