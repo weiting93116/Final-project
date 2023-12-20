@@ -177,7 +177,7 @@ header {
 
 .carousel-controls {
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -211,13 +211,16 @@ header {
     padding: 40px 0;
     color: #333;
     height: 700px;
+    background-image: url(../image/bbg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .findtea-title {
     text-align: left;
     font-size: 30px;
     font-weight: bolder;
-    padding: 40px;
+    padding: 0px;
 }
 
 .card-container {
@@ -315,7 +318,6 @@ header {
     padding: 40px 0;
     color: #333;
     height: 650px;
-    margin: 50px 0px;
     position: relative;
     background-image: url('../image/about.jpg');
     background-size: cover;
@@ -717,6 +719,10 @@ footer {
 .web_tags a {
     color: white;
     text-decoration: none;
+}
+
+li {
+    list-style: none;
 }
 
 .privacy-policy {
