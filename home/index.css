@@ -177,7 +177,7 @@ header {
 
 .carousel-controls {
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
