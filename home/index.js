@@ -77,3 +77,37 @@ document.addEventListener("DOMContentLoaded", function() {
 function addToCart(productName) {
     alert('已將商品 ' + productName + ' 加入購物車！');
 }
+
+//totop
+document.addEventListener("DOMContentLoaded", function() {
+  var topBtn = document.getElementById("topBtn");
+
+  window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          topBtn.style.display = "block";
+      } else {
+          topBtn.style.display = "none";
+      }
+  };
+
+  topBtn.addEventListener("click", function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  });
+});
+
+//search
+document.addEventListener("DOMContentLoaded", function() {
+    var searchBtn = document.getElementById("searchbtn");
+    var searchBox = document.getElementById("searchBox");
+    var closeSearchBoxBtn = document.getElementById("closeSearchBox");
+
+    searchBtn.addEventListener("click", function() {
+        searchBox.style.display = "block";
+    });
+
+    closeSearchBoxBtn.addEventListener("click", function() {
+        searchBox.style.display = "none";
+    });
+});
+

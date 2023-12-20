@@ -75,3 +75,27 @@ form {
     text-align: center;
     padding: 10px;
 }
+
+#homeBtn {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#homeBtn a {
+    text-decoration: none;
+    color: #000;
+}
+
+#homeBtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+}
