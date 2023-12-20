@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
 
 .Product {
     display: flex;
@@ -72,12 +68,11 @@ li {
 
 .cart_and_membership p {
     font-size: 10pt;
-    <<<<<<< HEAD color: white;
+    color: white;
 }
 
 .header_list a {
     text-decoration: none;
-    =======>>>>>>>11144117
 }
 
 .cart_and_membership img {
