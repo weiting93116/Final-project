@@ -101,8 +101,11 @@
         <section class="about-us">
             <P class="about-us-title">｜關於我們</P>
             <div class="about-us-content">
-                我們尋覓的不僅是茶葉，更是一種生活的詩意。<br>
-                每一片茶葉都如詩如畫，縈繞於指尖間，<br>品味著時間的靜好，感受著心靈的深處。<br>
+                當茶葉舞動於指尖，我們尋覓的是生活的詩意。<br>
+                每片茶葉如詩如畫，品味時間靜好，感受心靈深處。<br>
+                茶的香氣彷彿大自然的歌聲，帶來內心寧靜。<br>
+                每次沖泡，彷彿穿越山水，茶葉在水中翩翩起舞，述說著深沉故事。<br>
+                這裡是尋找內心寧靜的旅程，一同漫遊在茶的香氣中，尋找生活中的美好詩意。<br>
             </div>
             <button class="about-us-btn">More →</button>
         </section>
@@ -160,18 +163,26 @@
         <section  class="map">
             <p class="map-title">｜來品茶</p>
             <div class="map-photo">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.285849947316!2d121.24176902482964!3d24.956387391413372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346822143c046009%3A0x63e3ef21e3beebac!2z6LOH6KiK566h55CG5a2457O7!5e0!3m2!1szh-TW!2stw!4v1702749893439!5m2!1szh-TW!2stw" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14469.068146818874!2d121.2435522!3d24.9570277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346822143c046009%3A0x63e3ef21e3beebac!2z6LOH6KiK566h55CG5a2457O7!5e0!3m2!1szh-TW!2stw!4v1703232394846!5m2!1szh-TW!2stw" width="1400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
         <button id="searchbtn">🔍</button>
         <div id="searchBox">
-            <input type="text" placeholder="輸入產品名稱">
+            <input type="text" id="placeholder" placeholder="輸入產品名稱">
             <button id="closeSearchBox">&times;</button>
             <button id="submitSearch">搜尋</button>
         </div>
 
         <a href="#"></a><button id="topBtn">↑</button></a>
+
+        <audio controls autoplay loop id="myAudio">
+            <source src="../music/music1.mp3" type="audio/mp3">
+        </audio>
+        
+        <button id="playPauseBtn" onclick="togglePlayPause()">🔊</button>
+        
+
     </main>
 
     <footer>

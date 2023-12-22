@@ -11,7 +11,8 @@ a {
 
 
 header {
-    height: 800px;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +184,7 @@ header {
 
 .carousel-controls {
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -192,14 +193,15 @@ header {
 
 .carousel-controls label {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #999;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
+
 
 .carousel-controls input:checked+label {
     background-color: #d9d9d9;
@@ -214,9 +216,9 @@ header {
 
 .find-tea {
     text-align: center;
-    padding: 40px 0;
     color: #333;
-    height: 700px;
+    height: 100vh;
+    width: 100vw;
 }
 
 .findtea-title {
@@ -318,11 +320,9 @@ header {
 
 .about-us {
     text-align: center;
-    padding: 40px 0;
     color: #333;
-    height: 650px;
-    margin: 50px 0px;
-    position: relative;
+    height: 100vh;
+    width: 100vw;
     background-image: url('../image/about.jpg');
     background-size: cover;
     backdrop-filter: blur(10px);
@@ -334,38 +334,21 @@ header {
     font-weight: bolder;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 50px;
 }
 
 .about-us-content {
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     text-align: left;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    padding: 50px;
+    justify-content: right;
     line-height: 2;
-    margin-left: 70%;
-    white-space: nowrap;
-    transform: translateX(-60%);
-    opacity: 0;
-    animation: fadeIn 3s forwards, initialPosition 0s forwards;
+    margin: 50px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(20%);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateX(-45%);
-    }
-}
 
 .about-us-btn {
     background-color: #2e2929;
@@ -416,52 +399,7 @@ header {
     max-height: 600px;
     overflow: hidden;
     max-width: 400px;
-    box-shadow: 0 0 0 transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-@keyframes floatAnimationUp {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes floatAnimationDown {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-}
-
-.product:nth-child(1) {
-    animation: floatAnimationUp 3s infinite;
-}
-
-.product:nth-child(2) {
-    animation: floatAnimationDown 3s infinite;
-}
-
-.product:nth-child(3) {
-    animation: floatAnimationUp 3s infinite;
-}
-
-.product:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    animation: none;
-}
-
 
 .product img {
     border-radius: 8px;
@@ -501,9 +439,8 @@ header {
 
 .find-tea-set {
     background-color: #211E1E;
-    height: 700px;
-    padding: 10px;
-    margin-top: 60px;
+    height: 100vh;
+    width: 100vw;
 
 }
 
@@ -602,9 +539,8 @@ header {
 
 .map {
     text-align: center;
-    height: 700px;
-    padding: 10px;
-    margin-top: 60px;
+    height: 100vh;
+    width: 100vw;
 }
 
 .map-title {
@@ -689,6 +625,20 @@ iframe {
     color: #fff;
 }
 
+/*音樂*/
+#playPauseBtn {
+    position: fixed;
+    bottom: 110px;
+    right: 20px;
+    background-color: #565656;
+    color: rgb(223, 223, 223);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
 /*FOOTER*/
 footer {
     background-color: #211E1E;
@@ -697,6 +647,7 @@ footer {
     height: fit-content;
     padding: 15px;
     bottom: 0;
+    position: relative;
 }
 
 .footer_logo {
