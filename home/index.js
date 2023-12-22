@@ -129,3 +129,10 @@ document.addEventListener("DOMContentLoaded", function () {
   playPauseBtn.addEventListener("click", togglePlayPause);
 });
 
+/*pop */
+const cartnav = document.querySelector('.cartnav');
+const cartPopup = document.getElementById('cartPopup');
+
+cartnav.addEventListener('click', function () {
+  cartPopup.style.display = (cartPopup.style.display === 'block') ? 'none' : 'block';
+});
