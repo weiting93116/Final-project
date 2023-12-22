@@ -625,6 +625,10 @@ iframe {
     color: #fff;
 }
 
+audio {
+    display: none;
+}
+
 /*音樂*/
 #playPauseBtn {
     position: fixed;

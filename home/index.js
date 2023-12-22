@@ -101,18 +101,31 @@ document.addEventListener("DOMContentLoaded", function () {
   var audio = document.getElementById("myAudio");
   var playPauseBtn = document.getElementById("playPauseBtn");
 
-  playPauseBtn.innerHTML = "🔊";
+  playPauseBtn.innerHTML = "🔇";
 
   function togglePlayPause() {
       if (audio && playPauseBtn) {
           if (audio.paused) {
               audio.play();
-              playPauseBtn.innerHTML = "🔇";
           } else {
               audio.pause();
-              playPauseBtn.innerHTML = "🔊";
           }
+          updateButton();
       }
   }
+
+  function updateButton() {
+      playPauseBtn.innerHTML = audio.paused ? "🔊" : "🔇";
+  }
+
+  // 自動播放和重複播放
+  audio.autoplay = true;
+  audio.loop = true;
+  audio.muted = false;
+
+  // 更新按鈕狀態
+  updateButton();
+
   playPauseBtn.addEventListener("click", togglePlayPause);
 });
+
