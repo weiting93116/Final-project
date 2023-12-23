@@ -11,8 +11,8 @@ a {
 
 
 header {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,16 +62,15 @@ header {
 #mainNav {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 10px;
     background-color: #211E1E;
+    width: 100%;
 }
 
 #mainNav a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
-    margin-right: 20px;
 }
 
 #mainNav img {
@@ -128,8 +127,6 @@ header {
 
 .menu ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -159,6 +156,7 @@ header {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     display: block;
     overflow: visible;
+    z-index: 100;
 }
 
 .menu li:hover .submenu {
@@ -215,7 +213,7 @@ header {
 /*輪播圖*/
 
 .carousel-container {
-    width: 100vw;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -281,8 +279,9 @@ header {
 .find-tea {
     text-align: center;
     color: #333;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
 }
 
 .findtea-title {
@@ -385,11 +384,13 @@ header {
 .about-us {
     text-align: center;
     color: #333;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-image: url('../image/about.jpg');
     background-size: cover;
+    background-position: center 30%;
     backdrop-filter: blur(10px);
+    padding: 20px;
 }
 
 .about-us-title {
@@ -503,9 +504,9 @@ header {
 
 .find-tea-set {
     background-color: #211E1E;
-    height: 100vh;
-    width: 100vw;
-
+    height: 100%;
+    width: 100%;
+    padding: 10px;
 }
 
 .teaset-title {
@@ -573,10 +574,11 @@ header {
     font-size: 30px;
     height: 60px;
     width: 150px;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    這邊蓋住沒有改變，但我不確定要不要刪*/
     position: relative;
     left: calc(50% + 10px);
     transition: background-color 0.3s ease;
@@ -603,8 +605,9 @@ header {
 
 .map {
     text-align: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
 }
 
 .map-title {
@@ -617,6 +620,8 @@ header {
 iframe {
     display: block;
     margin: auto;
+    width: 100%;
+    /*這邊如果加上去會比較長換個裝置也不會跑版*/
 }
 
 /* 搜尋、回到TOP*/
@@ -714,8 +719,7 @@ footer {
     width: 100%;
     height: fit-content;
     padding: 15px;
-    bottom: 0;
-    position: relative;
+    margin-top: auto;
 }
 
 .footer_logo {
