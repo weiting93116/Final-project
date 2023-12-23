@@ -415,29 +415,7 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes floatAnimationUp {
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes floatAnimationDown {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-}
 
 .product:nth-child(1) {
     animation: floatAnimationUp 3s infinite;
