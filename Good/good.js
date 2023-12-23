@@ -86,13 +86,24 @@ const reviewInfoElement = document.querySelector('.review-info');
 // 顯示留言總計星數及評論數
 reviewInfoElement.innerHTML = `★★★★★ ${averageStars.toFixed(1)}/5 (${totalReviews}則評論)`;
 
-
-
-
-
-
 //推薦商品
+
 function addToCart(productName) {
 
     alert('已加入購物車！\n產品：' + productName);
 }
+
+//搜尋
+document.addEventListener("DOMContentLoaded", function() {
+    var searchBtn = document.getElementById("searchbtn");
+    var searchBox = document.getElementById("searchBox");
+    var closeSearchBoxBtn = document.getElementById("closeSearchBox");
+
+    searchBtn.addEventListener("click", function() {
+        searchBox.style.display = "block";
+    });
+
+    closeSearchBoxBtn.addEventListener("click", function() {
+        searchBox.style.display = "none";
+    });
+});

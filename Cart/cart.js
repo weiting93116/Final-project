@@ -1,7 +1,6 @@
 const cartItems = [
-    { id: 1, name: '商品A', price: 10, quantity: 2 },
-    { id: 2, name: '商品B', price: 15, quantity: 1 },
-    // 可以添加更多的购物车项
+    { id: 1, name: '極品紅茶', price: 350, quantity: 2 },
+    { id: 2, name: '極品綠茶', price: 350, quantity: 1 },
   ];
   
   function updateCart() {
