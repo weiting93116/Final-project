@@ -369,6 +369,11 @@ section {
     cursor: pointer;
 }
 
+/*購物須知*/
+.tab-panel {
+    text-align: left;
+}
+
 /*回首頁、搜尋*/
 #searchbtn {
     position: fixed;
