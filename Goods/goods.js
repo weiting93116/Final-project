@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Show the initial tab content ('tab01' for 茶葉)
-    showTab('tab01');
+    // 檢查 URL 中是否有#片段
+    if (window.location.hash) {
+        // 從#片段中提取 tabId
+        var tabIdFromHash = window.location.hash.substring(1);
+
+        // 根據#片段顯示選擇的選項卡
+        showTab(tabIdFromHash);
+    } else {
+        // 如果沒有#片段，顯示默認選項卡（茶葉的是 'tab01'）
+        showTab('tab01');
+    }
 });
 
 function showTab(tabId) {
