@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>membership</title>
+    <title>會員資料</title>
     <link rel="stylesheet" href="memberships.css">
     <script src="membership.js" defer></script>
 </head>
@@ -22,7 +22,7 @@
         <div class="cart_and_membership">
             <div class="cartnav">
                 <img src="../home/icon/shopping-cart.png">&nbsp;&nbsp;
-                <a href="cart.html">
+                <a href="../Cart/cart.html">
                     <p>購物車</p>
                 </a>
             </div>
@@ -54,15 +54,17 @@
                 電子郵件：<span id="email">john@example.com</span><br>
             </div>
 
-            <div class="modify" id="editForm" style="display: none;" >
-                姓名：<input type="text" id="editName"><br>
-                性別：<input type="text" id="editGender" disabled><br>
-                生日：<input type="text" id="editBirthday" disabled><br>
-                電話：<input type="text" id="editPhone"><br>
-                地址：<input type="text" id="editAddress"><br>
-                電子郵件：<input type="text" id="editEmail"><br>
-                <button onclick="saveChanges()">保存修改</button>
-            </div>
+            <form>
+                <div class="modify" id="editForm" style="display: none;" >
+                    姓名：<input type="text" id="editName"><br>
+                    性別：<input type="text" id="editGender" disabled><br>
+                    生日：<input type="text" id="editBirthday" disabled><br>
+                    電話：<input type="text" id="editPhone"><br>
+                    地址：<input type="text" id="editAddress"><br>
+                    電子郵件：<input type="text" id="editEmail"><br>
+                    <button onclick="saveChanges()">保存修改</button>
+                </div>
+            </form>
         </div>
 
         <p class="purchase-history">購買紀錄</p>
@@ -134,7 +136,7 @@
         </div>
         <button id="searchbtn">🔍</button>
         <div id="searchBox">
-            <input type="text" placeholder="輸入產品名稱">
+            <input type="text" id="productName" placeholder="輸入產品名稱">
             <button id="closeSearchBox">&times;</button>
             <button id="submitSearch">搜尋</button>
         </div>

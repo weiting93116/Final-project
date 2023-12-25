@@ -12,18 +12,18 @@ body {
 .login-container {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .login-photo,
 .login-text {
-    flex: 1;
     text-align: center;
-    padding: 10px;
 }
 
 .login-photo img {
     width: 100%;
-    height: 700px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -47,7 +47,7 @@ body {
     background-color: #3D3535;
     color: white;
     padding: 10px;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 100px;
 }
 
@@ -56,7 +56,7 @@ body {
     padding: 10px;
     width: 450px;
     height: 290px;
-    margin: 0px auto 10px;
+    margin: 0px auto 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

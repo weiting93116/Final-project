@@ -12,3 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
         searchBox.style.display = "none";
     });
 });
+
+
+function showConfirmation() {
+    alert("已送出評論！");
+}

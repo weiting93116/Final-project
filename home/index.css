@@ -11,7 +11,8 @@ a {
 
 
 header {
-    height: 800px;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,17 +62,15 @@ header {
 #mainNav {
     display: flex;
     justify-content: center;
-    /* 將內容水平置中 */
-    align-items: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #211E1E;
+    width: 100%;
 }
 
 #mainNav a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
-    margin-right: 20px;
 }
 
 #mainNav img {
@@ -79,30 +78,33 @@ header {
     height: 20px;
 }
 
-.cart_and_membership {
+.cart_and_membership,
+.fixed .cart_and_membership {
     position: absolute;
     right: 0;
     display: flex;
     align-items: center;
-    margin-right: 40px;
-}
-
-.cartnav,
-.membershipnav {
-    display: flex;
-}
-
-.cart_and_membership>div {
     margin-right: 20px;
 }
 
-.cart_and_membership p {
+.cartnav,
+.membershipnav,
+.fixed .cartnav,
+.fixed .membershipnav {
+    display: flex;
+}
+
+.cart_and_membership>div,
+.fixed .cart_and_membership>div {
+    margin-right: 20px;
+}
+
+.cart_and_membership p,
+.fixed .cart_and_membership p {
     margin: 0;
     font-size: 14px;
     color: white;
 }
-
-
 
 .fixed {
     position: fixed;
@@ -123,24 +125,85 @@ header {
     margin-right: 20px;
 }
 
-.fixed .cart_and_membership {
-    position: absolute;
-    right: 0;
+.menu ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    margin-right: 40px;
 }
 
-.fixed .cart_and_membership>div {
+.menu li {
     margin-right: 20px;
+    position: relative;
+    overflow: visible;
 }
 
-.fixed .cart_and_membership p {
-    margin: 0;
-    font-size: 14px;
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+}
+
+.menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(32, 32, 32);
+    color: #d9d9d9;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    display: block;
+    overflow: visible;
+    z-index: 100;
+}
+
+.menu li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    background-color: #333;
+    color: #d9d9d9;
+}
+
+.menu .submenu a {
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-align: center;
+}
+
+.menu .submenu a:hover {
+    background-color: #333;
+    color: #d9d9d9;
+}
+
+
+.cartPopup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cartnav:hover #cartPopup {
+    display: block;
+}
+
+.checkoutbtn {
+    background-color: #222322;
+    border: none;
     color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
-
 
 
 
@@ -183,7 +246,7 @@ header {
 
 .carousel-controls {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -192,14 +255,15 @@ header {
 
 .carousel-controls label {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #999;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
+
 
 .carousel-controls input:checked+label {
     background-color: #d9d9d9;
@@ -214,12 +278,10 @@ header {
 
 .find-tea {
     text-align: center;
-    padding: 40px 0;
     color: #333;
-    height: 700px;
-    background-image: url(../image/bbg.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
 }
 
 .findtea-title {
@@ -321,13 +383,14 @@ header {
 
 .about-us {
     text-align: center;
-    padding: 40px 0;
     color: #333;
-    height: 650px;
-    position: relative;
+    height: 100%;
+    width: 100%;
     background-image: url('../image/about.jpg');
     background-size: cover;
+    background-position: center 30%;
     backdrop-filter: blur(10px);
+    padding: 20px;
 }
 
 .about-us-title {
@@ -336,38 +399,21 @@ header {
     font-weight: bolder;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 50px;
 }
 
 .about-us-content {
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     text-align: left;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    padding: 50px;
+    justify-content: right;
     line-height: 2;
-    margin-left: 70%;
-    white-space: nowrap;
-    transform: translateX(-60%);
-    opacity: 0;
-    animation: fadeIn 3s forwards, initialPosition 0s forwards;
+    margin: 50px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(20%);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateX(-45%);
-    }
-}
 
 .about-us-btn {
     background-color: #2e2929;
@@ -418,52 +464,7 @@ header {
     max-height: 600px;
     overflow: hidden;
     max-width: 400px;
-    box-shadow: 0 0 0 transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-@keyframes floatAnimationUp {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes floatAnimationDown {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-}
-
-.product:nth-child(1) {
-    animation: floatAnimationUp 3s infinite;
-}
-
-.product:nth-child(2) {
-    animation: floatAnimationDown 3s infinite;
-}
-
-.product:nth-child(3) {
-    animation: floatAnimationUp 3s infinite;
-}
-
-.product:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    animation: none;
-}
-
 
 .product img {
     border-radius: 8px;
@@ -503,10 +504,9 @@ header {
 
 .find-tea-set {
     background-color: #211E1E;
-    height: 700px;
+    height: 100%;
+    width: 100%;
     padding: 10px;
-    margin-top: 60px;
-
 }
 
 .teaset-title {
@@ -574,10 +574,11 @@ header {
     font-size: 30px;
     height: 60px;
     width: 150px;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    這邊蓋住沒有改變，但我不確定要不要刪*/
     position: relative;
     left: calc(50% + 10px);
     transition: background-color 0.3s ease;
@@ -604,9 +605,9 @@ header {
 
 .map {
     text-align: center;
-    height: 700px;
-    padding: 10px;
-    margin-top: 60px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
 }
 
 .map-title {
@@ -619,6 +620,8 @@ header {
 iframe {
     display: block;
     margin: auto;
+    width: 100%;
+    /*這邊如果加上去會比較長換個裝置也不會跑版*/
 }
 
 /* 搜尋、回到TOP*/
@@ -691,6 +694,24 @@ iframe {
     color: #fff;
 }
 
+audio {
+    display: none;
+}
+
+/*音樂*/
+#playPauseBtn {
+    position: fixed;
+    bottom: 110px;
+    right: 20px;
+    background-color: #565656;
+    color: rgb(223, 223, 223);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
 /*FOOTER*/
 footer {
     background-color: #211E1E;
@@ -698,12 +719,12 @@ footer {
     width: 100%;
     height: fit-content;
     padding: 15px;
-    bottom: 0;
+    margin-top: auto;
 }
 
 .footer_logo {
     width: 20%;
-    margin-left: 50px;
+    margin: 5% 0 5% 5%;
 }
 
 .footer_logo img {
@@ -715,6 +736,7 @@ footer {
 .menu {
     display: flex;
     margin: 10px 0;
+    justify-content: space-evenly;
 }
 
 .web_tags {
@@ -725,7 +747,6 @@ footer {
 
 .web_tags a {
     color: white;
-    text-decoration: none;
 }
 
 li {
