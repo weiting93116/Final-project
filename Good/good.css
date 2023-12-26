@@ -33,10 +33,6 @@ header {
     color: white;
 }
 
-li {
-    list-style: none;
-}
-
 .logo {
     width: 30%;
     height: auto;
@@ -276,9 +272,10 @@ section {
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-top: 5px;
 }
 
-.tab-content p {
+#product-reviews.tab-panel p {
     font-size: 15px;
     font-weight: bold;
     display: flex;
@@ -293,8 +290,35 @@ section {
     margin: 10px;
 }
 
+#shopping-info.tab-panel {
+    padding: 20px;
+}
+
+.tab-panel-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#shopping-info li ol {
+    padding-left: 20px; /* 設置縮排的左邊距，根據需要進行調整 */
+}
+
+.shopping-info-title {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#shopping-info.tab-panel {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
 .like {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
     text-align: left;
