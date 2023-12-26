@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
           alert(`${productName}，已加入購物車，購買件數: ${quantity}`);
           // 在此添加实际加入购物车的逻辑
       } else {
-          alert('庫存不足');
+          alert('購買數量不能為0!');
       }
   });
 
@@ -69,7 +69,13 @@ function showTab(tabId) {
     // 顯示選中的標籤內容
     var selectedTab = document.getElementById(tabId);
     selectedTab.classList.add('active');
-  }
+
+    if (tabId === 'shopping-info') {
+        requestAnimationFrame(function() {
+            window.dispatchEvent(new Event('resize'));
+        }, 0)
+    }
+}
 
 
 //評論星數
