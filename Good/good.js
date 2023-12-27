@@ -21,12 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 减少数量按钮点击事件
   decrementBtn.addEventListener('click', function () {
-      if (quantityInput.value > 1) {
-          quantityInput.value--;
-          stock++;
-          updateStockDisplay();
-      }
-  });
+    const currentQuantity = parseInt(quantityInput.value, 10);
+    if (currentQuantity > 1 && stock < 50) {
+        quantityInput.value--;
+        stock++;
+        updateStockDisplay();
+    } else if (currentQuantity === 1 && stock < 50) {
+        // 如果數量已經是1，執行減少操作會將庫存還原，這時也執行更新
+        quantityInput.value--;
+        stock++;
+        updateStockDisplay();
+    }
+});
 
   // 增加数量按钮点击事件
   incrementBtn.addEventListener('click', function () {

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="good.css">
     <script src="good.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
   <header>
@@ -52,7 +51,9 @@
                 <img class="thumbnail" src="../image/Jingshenyu3.jpg" alt="Thumbnail 3" onclick="changeImage(2)">
                 <iconify-icon icon="mingcute:right-line" id="next-button" onclick="changeImage(1)"></iconify-icon>
             </div>
-              <script src="thumbnail.js"></script>
+
+            <script src="thumbnail.js"></script>
+
             </div>
       
       
@@ -124,44 +125,82 @@
       </section>
       <section>
         <p class="like">｜猜您喜歡</p>
-        <div class="recommended-products-container">
-          <div class="product">
+        <div class="slideshow-container"> 
+          <div class="singleSlide fade">
             <img src="../image/eastbeauty.avif" alt="Black Tea">
             <p class="product-name">東方美人</p>
             <p class="product-price">$350</p>
             <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
           </div>
-          <div class="product">
-            <img src="../image/milkkimshan.avif" alt="Black Tea">
-            <p class="product-name">金萱</p>
-            <p class="product-price">$350</p>
-            <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+  
+          <div class="singleSlide fade">
+            <img src="../image/milkkimshan.jpg" alt="Black Tea">
+              <p class="product-name">金萱</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
           </div>
-          <div class="product">
-            <img src="../image/beluochun.avif" alt="Black Tea">
-            <p class="product-name">碧螺春</p>
-            <p class="product-price">$350</p>
-            <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+  
+          <div class="singleSlide fade">
+            <img src="../image/beluochun.jpg" alt="Black Tea">
+              <p class="product-name">碧螺春</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
           </div>
-          <div class="product">
-            <img src="../image/promountaintea.avif" alt="Black Tea">
-            <p class="product-name">高山烏龍</p>
-            <p class="product-price">$350</p>
-            <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+
+          <div class="singleSlide fade">
+            <img src="../image/promountaintea.jpg" alt="Black Tea">
+              <p class="product-name">高山烏龍</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
           </div>
-          <div class="product">
+
+          <div class="singleSlide fade">
             <img src="../image/glodenwoolong.jpg" alt="Black Tea">
-            <p class="product-name">特金烏龍</p>
-            <p class="product-price">$350</p>
-            <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+              <p class="product-name">特金烏龍</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
           </div>
-          <div class="product">
+
+          <div class="singleSlide fade">
             <img src="../image/whitepeachwoolong.jpg" alt="Black Tea">
-            <p class="product-name">白桃烏龍</p>
-            <p class="product-price">$350</p>
-            <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+              <p class="product-name">白桃烏龍</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
           </div>
+
+          <div class="singleSlide fade">
+            <img src="../image/alimountainwoolong.avif" alt="Black Tea">
+              <p class="product-name">阿里山烏龍</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../image/feguanin.avif" alt="Black Tea">
+              <p class="product-name">鐵觀音</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../image/sunmoonlakered.avif" alt="Black Tea">
+              <p class="product-name">日月潭紅茶</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../image/sweetorangered.avif" alt="Black Tea">
+              <p class="product-name">甜橙紅茶</p>
+              <p class="product-price">$350</p>
+              <button class="add-to-cart-btn" onclick="addToCart('紅茶 A')">加入購物車</button>
+          </div>
+        
+          <button class="prev" onclick="plusSlides(-1)">&#9665;</button>
+          <button class="next" onclick="plusSlides(1)">&#9655;</button>
         </div>
+        <script src="carouse.js"></script>
+
       </section>
     </div>
   </main>

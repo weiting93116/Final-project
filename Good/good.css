@@ -294,44 +294,34 @@ section {
 }
 
 .like {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
     text-align: left;
     padding: 20px;
 }
 
-
-.recommended-products-container {
-    text-align: left;
-    font-size: 25px;
-    font-weight: bold;
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 20px;
-    overflow: auto;
-}
-
-.product {
-    flex: 0 0 auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    width: 200px;
-    height: 310px;
-    transition: transform 0.3s ease-in-out;
-    animation: fadeInUp 0.8s ease-in-out;
-}
-
-.product img {
-    max-width: 75%;
+.slideshow-container {
+    position: relative;
+    margin: 0 10%;
+    width: 80%;
     height: auto;
-    margin: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
 }
 
-.product p {
-    line-height: 0.5;
+.singleSlide {
+    grid-template-rows: auto auto auto;
+    margin: 60px;
+    text-align: center;
+}
+
+.singleSlide img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .product-name {
@@ -342,6 +332,14 @@ section {
 .product-price {
     color: green;
     margin: 15px;
+}
+
+.product-name,
+.product-price,
+.add-to-cart-btn {
+    font-weight: bold;
+    margin: 15px;
+    text-align: center; /* 讓內容水平置中 */
 }
 
 .product:hover {
@@ -360,13 +358,57 @@ section {
     }
 }
 
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 15px;
+    color: black;
+    border-radius: 3px;
+    border: transparent solid 1px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white !important;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .add-to-cart-btn {
     background-color: #331f10;
+    width: 80px;
+    height: 80px;
     color: #fff;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 15px 15px 15px auto;
 }
 
 /*購物須知*/
