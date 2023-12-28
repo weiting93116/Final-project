@@ -11,7 +11,7 @@ a {
 
 
 header {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -177,36 +177,6 @@ header {
     background-color: #333;
     color: #d9d9d9;
 }
-
-
-.cartPopup {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.cartnav:hover #cartPopup {
-    display: block;
-}
-
-.checkoutbtn {
-    background-color: #222322;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-
-
 
 
 
@@ -384,7 +354,7 @@ header {
 .about-us {
     text-align: center;
     color: #333;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-image: url('../image/about.jpg');
     background-size: cover;
@@ -575,11 +545,6 @@ header {
     font-size: 30px;
     height: 60px;
     width: 150px;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    這邊蓋住沒有改變，但我不確定要不要刪*/
     position: relative;
     left: calc(50% + 10px);
     transition: background-color 0.3s ease;
@@ -619,10 +584,7 @@ header {
 }
 
 iframe {
-    display: block;
-    margin: auto;
-    width: 100%;
-    /*這邊如果加上去會比較長換個裝置也不會跑版*/
+    width: 90%;
 }
 
 /* 搜尋、回到TOP*/
