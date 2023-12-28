@@ -24,12 +24,17 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+    gap: 10px;
 }
 
 .header_text {
     padding: 0 5%;
     font-size: 12pt;
     color: white;
+}
+
+header a {
+    text-decoration: none;
 }
 
 .logo {
@@ -78,6 +83,50 @@ header {
 .cartnav,
 .membershipnav {
     display: flex;
+}
+
+
+.has-submenu {
+    list-style-type: none;
+}
+
+.has-submenu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #333;
+    color: #d9d9d9;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu li {
+    display: block;
+}
+
+.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+    color: #d9d9d9;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.submenu a:hover {
+    background-color: #555;
+    color: #fff;
 }
 
 /*成員*/

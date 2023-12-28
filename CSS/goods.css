@@ -27,7 +27,6 @@ header {
     color: white;
     position: relative;
     display: flex;
-
 }
 
 .header_list {
@@ -35,6 +34,7 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+    gap: 10px;
 }
 
 .header_text {
@@ -90,6 +90,45 @@ header {
 .membershipnav {
     display: flex;
 }
+
+.has-submenu {
+    list-style-type: none;
+}
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #333;
+    color: #d9d9d9;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu li {
+    display: block;
+}
+
+.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+    color: #d9d9d9;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.submenu a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
 
 /*Goods*/
 .container {
