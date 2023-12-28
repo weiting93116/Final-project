@@ -151,7 +151,7 @@ header {
     text-align: center;
 }
 
-.information button {
+#inbtn {
     background-color: rgb(95, 93, 93);
     color: white;
     font-size: 25px;
@@ -308,7 +308,7 @@ footer {
     padding: 10px;
 }
 
-#searchBox input {
+#placeholder {
     width: 200px;
     padding: 8px;
     margin-right: 8px;
