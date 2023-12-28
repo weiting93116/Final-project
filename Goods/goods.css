@@ -27,7 +27,6 @@ header {
     color: white;
     position: relative;
     display: flex;
-
 }
 
 .header_list {
@@ -35,6 +34,7 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+    gap: 10px;
 }
 
 .header_text {
