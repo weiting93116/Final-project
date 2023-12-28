@@ -373,13 +373,13 @@ header {
 
 .about-us-content {
     color: white;
-    font-size: 15pt;
+    font-size: 17pt;
     font-weight: bold;
     text-align: left;
     display: flex;
     justify-content: right;
     line-height: 2;
-    margin: 40px;
+    margin: 5% 10% 4%;
 }
 
 
