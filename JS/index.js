@@ -96,43 +96,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//音樂
-document.addEventListener("DOMContentLoaded", function () {
-  var audio = document.getElementById("myAudio");
-  var playPauseBtn = document.getElementById("playPauseBtn");
 
-  playPauseBtn.innerHTML = "🔇";
 
-  function togglePlayPause() {
-      if (audio && playPauseBtn) {
-          if (audio.paused) {
-              audio.play();
-          } else {
-              audio.pause();
-          }
-          updateButton();
-      }
-  }
-
-  function updateButton() {
-      playPauseBtn.innerHTML = audio.paused ? "🔊" : "🔇";
-  }
-
-  // 自動播放和重複播放
-  audio.autoplay = true;
-  audio.loop = true;
-  audio.muted = false;
-
-  // 更新按鈕狀態
-  updateButton();
-
-  playPauseBtn.addEventListener("click", togglePlayPause);
-});
-
-/*pop */
-const cartnav = document.querySelector('.cartnav');
-const cartPopup = document.getElementById('cartPopup');
-
-cartnav.addEventListener('click', function () {
-  cartPopup.style.display = (cartPopup.style.display === 'block') ? 'none' : 'block';
-});
