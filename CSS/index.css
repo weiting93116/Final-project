@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #211E1E;
+}
+
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fadeInDown 2s forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.logo-text img {
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+}
+
+
+.logo-text p {
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*標籤*/
+
+#mainNav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #211E1E;
+    width: 100%;
+}
+
+#mainNav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+#mainNav img {
+    width: 20px;
+    height: 20px;
+}
+
+.cart_and_membership,
+.fixed .cart_and_membership {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.cartnav,
+.membershipnav,
+.fixed .cartnav,
+.fixed .membershipnav {
+    display: flex;
+}
+
+.cart_and_membership>div,
+.fixed .cart_and_membership>div {
+    margin-right: 20px;
+}
+
+.cart_and_membership p,
+.fixed .cart_and_membership p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #211E1E;
+}
+
+.fixed a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin-right: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    display: block;
+}
+
+.menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(32, 32, 32);
+    color: #d9d9d9;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    display: block;
+    overflow: visible;
+    z-index: 100;
+}
+
+.menu li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    background-color: #333;
+    color: #d9d9d9;
+}
+
+.menu .submenu a {
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-align: center;
+}
+
+.menu .submenu a:hover {
+    background-color: #333;
+    color: #d9d9d9;
+}
+
+
+
+/*輪播圖*/
+
+.carousel-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border: 100px solid #211E1E;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.advertise {
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-controls label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.carousel-controls input:checked+label {
+    background-color: #d9d9d9;
+}
+
+.carousel-controls input {
+    display: none;
+}
+
+
+/*找茶葉*/
+
+.find-tea {
+    text-align: center;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.findtea-title {
+    text-align: left;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 0px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    gap: 100px;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card {
+    width: 220px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../image/bgggg.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.card:not(:hover) {
+    animation: floatAnimation 3s infinite alternate;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.card p {
+    font-size: 20px;
+    padding: 40px;
+    font-weight: bold;
+}
+
+.find-tea-btn {
+    background-color: #2e2929;
+    color: white;
+    font-size: 30px;
+    height: 50px;
+    width: 150px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.find-tea-btn:hover {
+    background-color: gray;
+}
+
+
+.tea-ename {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+}
+
+/*關於我們*/
+
+.about-us {
+    text-align: center;
+    color: #333;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../image/about.jpg');
+    background-size: cover;
+    background-position: center 50%;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.about-us-title {
+    text-align: left;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.about-us-content {
+    color: white;
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    justify-content: right;
+    line-height: 2;
+    margin: 5% 10% 4%;
+}
+
+
+
+.about-us-btn {
+    background-color: #2e2929;
+    color: white;
+    font-size: 30px;
+    height: 50px;
+    width: 150px;
+    margin-left: 35%;
+    transition: background-color 0.3s ease;
+}
+
+.about-us-btn:hover {
+    background-color: gray;
+}
+
+/*熱銷排行*/
+
+.hot-title {
+    text-align: left;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    padding: 40px;
+}
+
+.hot {
+    text-align: center;
+    height: 700px;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 5%;
+}
+
+.product {
+    flex: 1;
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    max-height: 600px;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.product img {
+    border-radius: 8px;
+    max-width: 75%;
+    height: auto;
+    margin: 10px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.product {
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.1);
+}
+
+.add-to-cart-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #555;
+}
+
+/*找茶具*/
+
+.find-tea-set {
+    background-color: #211E1E;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.teaset-title {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: left;
+    color: white;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.tea-set-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tea-pot,
+.tea-cup,
+.tea-tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    animation: floatAnimation 2s infinite alternate;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+.tea-pot:hover,
+.tea-cup:hover,
+.tea-tool:hover {
+    transform: scale(1.1);
+    animation: none;
+    transition: transform 0.3s ease;
+}
+
+
+.tea-pot img,
+.tea-cup img,
+.tea-tool img {
+    border-radius: 50%;
+    max-width: 190px;
+    max-height: 190px;
+}
+
+.teaset-us-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    background-color: #5e5858;
+    color: white;
+    font-size: 30px;
+    height: 60px;
+    width: 150px;
+    position: relative;
+    left: calc(50% + 10px);
+    transition: background-color 0.3s ease;
+}
+
+.teaset-us-btn a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+.teaset-us-btn:hover {
+    background-color: rgb(226, 225, 225);
+    color: #211E1E;
+}
+
+.tea-set-container p {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+/*來品茶*/
+
+.map {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.map-title {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: left;
+    padding: 40px;
+}
+
+iframe {
+    width: 90%;
+}
+
+/* 搜尋、回到TOP*/
+#searchbtn {
+    position: fixed;
+    bottom: 65px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+#searchBox {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#placeholder {
+    width: 200px;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+#closeSearchBox {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#submitSearch {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#topBtn a {
+    text-decoration: none;
+    color: #000;
+}
+
+#topBtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #211E1E;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    margin-top: auto;
+
+}
+
+.footer_logo {
+    width: 20%;
+    margin: 2%;
+}
+
+.footer_logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.menu {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-evenly;
+}
+
+.web_tags {
+    width: 16%;
+    font-size: 10pt;
+    padding: 0 2%;
+}
+
+.web_tags a {
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.privacy-policy {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 10pt;
+}
