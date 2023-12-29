@@ -16,7 +16,14 @@
         </div>
         <div class="header_list">
             <a href="../Final-project-main/index.html" class="header_text">首頁</a>
-            <a href="../Final-project-main/goods.html" class="header_text">商店</a>
+            <li class="has-submenu"> 
+                <a href="../Final-project-main/goods.html">產品商店</a>
+                <ul class="submenu">
+                    <li><a href="../Final-project-main/goods.html#tab01">茶葉</a></li>
+                    <li><a href="../Final-project-main/goods.html#tab02">茶具</a></li>
+                    <li><a href="../Final-project-main/goods.html#tab03">禮盒</a></li>
+                </ul>
+            </li>
             <a href="../Final-project-main/about.html" class="header_text">關於我們</a>
         </div>
         <div class="cart_and_membership">
@@ -40,7 +47,7 @@
         <div class="information">
             <div><img src="../Final-project-main/image/user.png"></div>
             <p>帳號名稱：<span id="accountName">CYCU****</span></p><br>
-            <button onclick="toggleEditMode()">＋編輯資料</button>
+            <input type="button" value="＋編輯資料" onclick="toggleEditMode()" id="inbtn">
         </div>
 
         <p class="basic-information" id="basic-information">基本資料</p>
@@ -134,15 +141,16 @@
                 <a href="../Final-project-main/memberships.html#comment-history">歷史評價</a>
             </div>
         </div>
-        <button id="searchbtn">🔍</button>
+
+        <input type="button" value="🔍" id="searchbtn">
         <div id="searchBox">
-            <input type="text" id="productName" placeholder="輸入產品名稱">
-            <button id="closeSearchBox">&times;</button>
-            <button id="submitSearch">搜尋</button>
+            <input type="text" id="placeholder" value="輸入產品名稱">
+            <input type="button" value="&times;" id="closeSearchBox">
+            <input type="button" value="搜尋" id="submitSearch">
         </div>
 
-        <a href="../Final-project-main/index.html"><button id="homeBtn">🏠</button></a>
-
+        <a href="../Final-project-main/index.html"><input type="button" id="homeBtn" value="🏠"></a>
+        
         <div class="privacy-policy">
             <p>隱私權政策@2023 林晨萱 吳庭儀 曾瑋婷 李聰源 吳柏慶 潘沛伶 李草芽</p>
         </div>

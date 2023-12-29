@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們</title>
     <link rel="stylesheet" href="../Final-project-main/CSS/about.css">
+    <script src="../Final-project-main/JS/about.js"></script>
 </head>
 <body>
     <header>
@@ -15,8 +16,15 @@
         </div>
         <div class="header_list">
             <a href="../Final-project-main/index.html" class="header_text">首頁</a>
-            <a href="../Final-project-main/goods.html" class="header_text">商店</a>
-            <a href="" class="header_text">關於我們</a>
+            <li class="has-submenu"> 
+                <a href="../Final-project-main/goods.html">產品商店</a>
+                <ul class="submenu">
+                    <li><a href="../Final-project-main/goods.html#tab01">茶葉</a></li>
+                    <li><a href="../Final-project-main/goods.html#tab02">茶具</a></li>
+                    <li><a href="../Final-project-main/goods.html#tab03">禮盒</a></li>
+                </ul>
+            </li>
+            <a href="../Final-project-main/about.html" class="header_text">關於我們</a>
         </div>
         <div class="cart_and_membership">
             <div class="cartnav">
@@ -36,7 +44,7 @@
 
     <main>
         <div class="about-us">
-            <p class="about-us-front" id="front">|前端-甲班</p>          
+            <p class="about-us-front" id="front">｜前端-甲班</p>          
             <div class="front">
 
                 <div class="member">
@@ -68,7 +76,7 @@
 
             </div>
 
-            <p class="about-us-front" id="back">|後端-乙班</p>
+            <p class="about-us-front" id="back">｜後端-乙班</p>
             <div class="back">
                 <div class="member">
                     <div> 
@@ -130,17 +138,17 @@
                 <a href="../Final-project-main/cart.html#basic-information">購物清單</a><br>
                 <a href="../Final-project-main/memberships.html">基本資料</a><br>
                 <a href="../Final-project-main/Reviewmessageboard.html#comment-history">購買紀錄</a><br>
-                <a href="">歷史評價</a>
+                <a href="../Final-project-main/memberships.html#comment-history">歷史評價</a>
             </div>
         </div>
-        <button id="searchbtn">🔍</button>
-        <div id="searchBox">
-            <input type="text" id="productName" placeholder="輸入產品名稱">
-            <button id="closeSearchBox">&times;</button>
-            <button id="submitSearch">搜尋</button>
-        </div>
 
-        <a href="../Final-project-main/index.html"><button id="homeBtn">🏠</button></a>
+        <input type="button" value="🔍" id="searchbtn">
+        <div id="searchBox">
+            <input type="text" id="placeholder" value="輸入產品名稱">
+            <input type="button" value="&times;" id="closeSearchBox">
+            <input type="button" value="搜尋" id="submitSearch">
+        </div>
+        <a href="../Final-project-main/index.html"><input type="button" id="homeBtn" value="🏠"></a>
 
         <div class="privacy-policy">
             <p>隱私權政策@2023 林晨萱 吳庭儀 曾瑋婷 李聰源 吳柏慶 潘沛伶 李草芽</p>
