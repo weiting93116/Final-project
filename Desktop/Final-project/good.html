@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品介紹</title>
+    <link rel="stylesheet" href="../Final-project-main/CSS/good.css">
+    <script src="../Final-project-main/JS/good.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="../Final-project-main/index.html"><img src="../Final-project-main/image/teatop.jpg"></a>
+        <p class="logo_text">找茶<br>FIND &nbsp; TEA</p>
+    </div>
+    <div class="header_list">
+        <a href="../Final-project-main/index.html" class="header_text">首頁</a>
+        <li class="has-submenu"> 
+          <a href="../Final-project-main/goods.html">產品商店</a>
+          <ul class="submenu">
+              <li><a href="../Final-project-main/goods.html#tab01">茶葉</a></li>
+              <li><a href="../Final-project-main/goods.html#tab02">茶具</a></li>
+              <li><a href="../Final-project-main/goods.html#tab03">禮盒</a></li>
+          </ul>
+      </li>
+        <a href="../Final-project-main/about.html" class="header_text">關於我們</a>
+    </div>
+    <div class="cart_and_membership">
+        <div class="cartnav">
+            <img src="../Final-project-main/icon/shopping-cart.png">&nbsp;&nbsp;
+            <a href="../Final-project-main/cart.html">
+                <p>購物車</p>
+            </a>
+        </div>
+        <div class="membershipnav">
+            <img src="../Final-project-main/icon/avatar.png">&nbsp;&nbsp;
+            <a href="../Final-project-main/Login.html">
+                <p>會員登入/註冊</p>
+            </a>
+        </div>
+    </div>
+</header>
+
+  <main>
+    <div class="Product">
+      <section>
+        <div class="product-container">
+          <div id="gallery">
+            <div id="image-container">
+                <img id="main-image" src="../Final-project-main/image/greentea.jpg" alt="Product Image">
+            </div>
+            <div id="thumbnails">
+                <iconify-icon icon="mingcute:left-line" id="prev-button" onclick="changeImage(-1)"></iconify-icon>
+                <img class="thumbnail" src="../Final-project-main/image/greentea.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
+                <img class="thumbnail" src="../Final-project-main/image/Jingshenyu1.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
+                <img class="thumbnail" src="../Final-project-main/image/Jingshenyu3.jpg" alt="Thumbnail 3" onclick="changeImage(2)">
+                <iconify-icon icon="mingcute:right-line" id="next-button" onclick="changeImage(1)"></iconify-icon>
+            </div>
+
+            <script src="../Final-project-main/JS/thumbnail.js"></script>
+
+            </div>
+      
+      
+            <div class="product-details">
+              <p class="title">極品綠茶</p><br>
+              <div class="introduce">
+                  內含：300g<br>
+                  產地：台灣<br>
+                  <p>說明：澀中帶苦，但不會太苦，回甘氣息讓人欲罷不能！！</p>
+                  <p>價格：$380</p>
+                  <p id="stock">庫存：50</p>
+                  <div class="quantity-container">
+                        購買數量：
+                        <input type="button" value="-" class="quantity-btn" id="decrement">
+                        <input type="text" id="quantity" value="1" min="1" max="50">
+                        <input type="button" value="+" class="quantity-btn" id="increment">
+                  </div>
+                    <p>
+                      <input type="button" value="直接購買" class="buy-btn">
+                      <input type="button" value="加入購物車" class="cart-btn" id="addToCart">
+                    </p>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="tabs-container">
+          <ul class="tab-title">
+            <li><a href="#" onclick="showTab('product-reviews', '商品評價')">商品評價</a></li>
+            <li><a href="#" onclick="showTab('shopping-info', '購物須知')">購物須知</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="product-reviews" class="tab-panel active">
+              <div class="review-item">
+                <div class="review-info">
+                  ★★★★★ 5/5 (3則評論)
+                </div>
+                <img src="../Final-project-main/image/user.png" alt="User photo">
+                <div class="user-name">cycu****</div>
+                <div class="rating">★★★★★</div>
+                <p>沖泡出來的茶不會澀，反而十分清甜，好茶！</p><hr>
+                <img src="../Final-project-main/image/user.png" alt="User photo">
+                <div class="user-name">cycu****</div>
+                <div class="rating">★★★★★</div>
+                <p>沖泡出來的茶不會澀，反而十分清甜，好茶！</p><hr>
+                <img src="../Final-project-main/image/user.png" alt="User photo">
+                <div class="user-name">cycu****</div>
+                <div class="rating">★★★★★</div>
+                <p>沖泡出來的茶不會澀，反而十分清甜，好茶！</p>
+              </div>
+            </div>
+      
+            <div id="shopping-info" class="tab-panel">
+              <br><p>茶壺購物須知：</p>
+              ⊚<b>材質選擇</b>： 茶壺的材質影響泡茶的風味，請根據個人需求與偏好選擇。<br>
+              ⊚<b>尺寸與容量</b>： 考慮您的泡茶習慣和人數，選擇合適尺寸和容量的茶壺。<br>
+              ⊚<b>清潔維護</b>： 定期清潔茶壺，避免留下茶漬或沉積物，以保持茶壺的使用壽命和茶湯的純淨。<br>
+              <br><p>茶葉購物須知：</p>
+              ⊚<b>茶種了解</b>： 瞭解不同茶種的特性，包括青茶、綠茶、紅茶等，以符合您的口味喜好。<br>
+              ⊚<b>保存方式</b>： 茶葉應儲存在乾燥、陰涼、避光的地方，可使用密封罐保存，遠離異味。<br>
+              ⊚<b>購買量掌握</b>： 根據個人飲茶頻率，選擇適量購買，以免茶葉長時間暴露在空氣中失去風味。<br>
+              <br><p>茶禮盒購物須知：</p>
+              ⊚<b>內容檢查</b>： 確認禮盒內容物，包括茶葉種類、附加禮品（茶杯、茶匙等）是否符合您的期望。<br>
+              ⊚<b>保存方式</b>： 如果禮盒中包含易變質的茶葉，請儘早享用或確保保存方式正確，以保持新鮮度。<br>
+              ⊚<b>禮盒選擇</b>： 根據受贈者的喜好和場合，選擇合適的禮盒。<br>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <p class="like">｜猜您喜歡</p>
+        <div class="slideshow-container"> 
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/eastbeauty.avif" alt="Black Tea">
+            <p class="product-name">東方美人</p>
+            <p class="product-price">$350</p>
+            <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+  
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/milkkimshan.jpg" alt="Black Tea">
+              <p class="product-name">金萱</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+  
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/beluochun.jpg" alt="Black Tea">
+              <p class="product-name">碧螺春</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/promountaintea.jpg" alt="Black Tea">
+              <p class="product-name">高山烏龍</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/glodenwoolong.jpg" alt="Black Tea">
+              <p class="product-name">特金烏龍</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/whitepeachwoolong.jpg" alt="Black Tea">
+              <p class="product-name">白桃烏龍</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/alimountainwoolong.avif" alt="Black Tea">
+              <p class="product-name">阿里山烏龍</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/feguanin.avif" alt="Black Tea">
+              <p class="product-name">鐵觀音</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/sunmoonlakered.avif" alt="Black Tea">
+              <p class="product-name">日月潭紅茶</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+
+          <div class="singleSlide fade">
+            <img src="../Final-project-main/image/sweetorangered.avif" alt="Black Tea">
+              <p class="product-name">甜橙紅茶</p>
+              <p class="product-price">$350</p>
+              <input type="button" value="加入購物車" class="add-to-cart-btn" onclick="addToCart('紅茶 A')">
+          </div>
+        
+          <input type="button" value="&#9665;" class="prev" onclick="plusSlides(-1)">
+          <input type="button" value="&#9655;" class="next" onclick="plusSlides(1)">
+        </div>
+        <script src="../Final-project-main/JS/carouse.js"></script>
+      </section>
+    </div>
+
+      <a href="../Final-project-main/index.html"><input type="button" id="homeBtn" value="🏠"></a>
+    </main>
+
+  <footer>
+    <div class="menu">
+        <div class="footer_logo">
+            <img src="../Final-project-main/image/teatop.jpg">
+        </div>
+        <div class="web_tags">
+            <h2><a href="../Final-project-main/index.html">首頁</a></h2>
+            <a href="../Final-project-main/index.html#find-tea">來找茶</a><br>
+            <a href="../Final-project-main/index.html#about-us">團隊</a><br>
+            <a href="../Final-project-main/index.html#hot">熱銷排行</a><br>
+            <a href="../Final-project-main/index.html#find-tea-set">找茶具</a><br>
+            <a href="../Final-project-main/index.html#map">來品茶</a>
+        </div>
+        <div class="web_tags">
+            <h2><a href="../Final-project-main/goods.html">產品商店</a></h2>
+            <a href="../Final-project-main/goods.html#tab01">茶葉</a><br>
+            <a href="../Final-project-main/goods.html#tab02">茶具</a><br>
+            <a href="../Final-project-main/goods.html#tab03">禮盒</a>
+        </div>
+        <div class="web_tags">
+            <h2><a href="../Final-project-main/about.html">關於我們</a></h2>
+            <a href="../Final-project-main/about.html#front">前端-甲班</a><br>
+            <a href="../Final-project-main/about.html#back">後端-乙班</a>
+
+        </div>
+        <div class="web_tags">
+            <h2><a href="../Final-project-main/Login.html">購物車/會員</a></h2>
+            <a href="../Final-project-main/cart.html">購物清單</a><br>
+            <a href="../Final-project-main/memberships.html#basic-information">基本資料</a><br>
+            <a href="../Final-project-main/Reviewmessageboard.html">購買紀錄</a><br>
+            <a href="../Final-project-main/memberships.html#comment-history">歷史評價</a>
+        </div>
+    </div>
+
+    <div class="privacy-policy">
+        <p>隱私權政策@2023 林晨萱 吳庭儀 曾瑋婷 李聰源 吳柏慶 潘沛伶 李草芽</p>
+    </div>
+</footer>
+</body>
+</html>
