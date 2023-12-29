@@ -141,7 +141,6 @@ header a {
     width: 70%;
     position: relative;
     margin: 50px auto;
-    display: block;
 }
 
 .memberlist h2 {
@@ -157,13 +156,41 @@ header a {
     color: white;
     padding: 10px;
     height: 40px;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 25% 20% auto;
+    grid-template-rows: repeat(auto-fit, minmax(auto,1fr));
 }
 
-.member-title div {
-    display: flex;
-    flex: 1;
+#user {
+    grid-column: 1/2;
+    grid-row: 0/1;
+}
+
+#gender {
+    grid-column: 2/3;
+    grid-row: 0/1;
+}
+
+#mailAddress {
+    grid-column: 3/4;
+    grid-row: 0/1;
+}
+
+.ex1 {
+    color: lightblue;
+    font-size: 40px;
+}
+
+#user1 {
+    grid-column: 1/2;
+}
+
+#gender1 {
+    grid-column: 2/3;
+}
+
+#mailAddress {
+    grid-column: 3/4;
 }
 
 /*FOOTER*/
