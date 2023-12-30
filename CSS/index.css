@@ -364,11 +364,11 @@ header {
 
 .about-us-title {
     text-align: left;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bolder;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 20px;
 }
 
 .about-us-content {
@@ -715,11 +715,7 @@ li {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
     header {
-        height: 90vh;
-    }
-
-    main {
-        width: 80%;
+        height: 90%;
     }
 
     .logo-text img {
@@ -743,18 +739,23 @@ li {
         margin: 5%;
     }
 
+    .about-us-title {
+        font-size: 25px;
+    }
+
     .about-us {
         text-align: center;
         color: #333;
-        height: 80vh;
-        width: 80%;
+        height: 60vh;
+        width: 100%;
+        backdrop-filter: blur(20px);
     }
 
     .about-us-content {
         display: block;
-        margin: 3% 40%;
+        margin: 3%;
         font-size: 12px;
-        margin-left: 20%;
+        margin-left: 35%;
     }
 
     .about-us-btn {
