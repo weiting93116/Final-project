@@ -208,7 +208,7 @@ header a {
 }
 
 .hidden {
-    width: 50%;
+    width: 80%;
     margin-top: 10px;
     position: relative;
 }
@@ -216,7 +216,7 @@ header a {
 .hidden-title {
     background-color: #d9d9d9;
     color: #000;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     display: grid;
     grid-template-columns: 50% auto;
@@ -234,7 +234,7 @@ header a {
 }
 
 .hidden-content {
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     display: grid;
     grid-template-columns: 50% auto;
@@ -252,11 +252,11 @@ header a {
 }
 
 .hidden input {
-    font-size: 15px;
+    font-size: 10px;
     padding: 5px;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 5px;
+    bottom: 5px;
 }
 
 /*FOOTER*/

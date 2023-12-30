@@ -1,20 +1,24 @@
+// 定義購物車商品陣列
 const cartItems = [
     { id: 1, name: '商品A', price: 10, quantity: 2 },
     { id: 2, name: '商品B', price: 15, quantity: 1 },
-    // 可以添加更多的购物车项
+    // 可以添加更多的購物車項目
   ];
   
+// 更新購物車顯示  
   function updateCart() {
+    // 獲取購物車容器和總價元素
     const cartItemsContainer = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
     let totalPrice = 0;
-  
+    // 清空購物車容器
     cartItemsContainer.innerHTML = '';
-  
+    // 遍歷購物車商品
     cartItems.forEach(item => {
+      // 創建購物車商品元素
       const cartItemElement = document.createElement('div');
       cartItemElement.classList.add('cart-item');
-  
+      // 設置購物車商品元素的HTML內容
       cartItemElement.innerHTML = `
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-price">$${item.price}</div>
@@ -26,15 +30,15 @@ const cartItems = [
         <div class="cart-item-total">$${item.price * item.quantity}</div>
         <div class="cart-item-delete" onclick="removeItem(${item.id})"><a href="#">刪除</a></div>
       `;
-  
+      // 將購物車商品元素添加到購物車容器中
       cartItemsContainer.appendChild(cartItemElement);
-  
+      // 計算總價
       totalPrice += item.price * item.quantity;
     });
-  
+    // 更新總價顯示
     totalPriceElement.textContent = totalPrice;
   }
-  
+  // 減少商品數量
   function decreaseQuantity(itemId) {
     const item = cartItems.find(item => item.id === itemId);
     if (item && item.quantity > 1) {
@@ -42,7 +46,7 @@ const cartItems = [
       updateCart();
     }
   }
-  
+  // 增加商品數量
   function increaseQuantity(itemId) {
     const item = cartItems.find(item => item.id === itemId);
     if (item) {
@@ -50,7 +54,7 @@ const cartItems = [
       updateCart();
     }
   }
-  
+  // 移除商品
   function removeItem(itemId) {
     const index = cartItems.findIndex(item => item.id === itemId);
     if (index !== -1) {
@@ -58,7 +62,7 @@ const cartItems = [
       updateCart();
     }
   }
-  
+  // 初始加載時更新購物車顯示
   updateCart();
 
   //搜尋
