@@ -11,12 +11,12 @@ body {
 
 .login-container {
     display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
-.login-photo,
+.login-photo {
+    width: 50%;
+}
+
 .login-text {
     text-align: center;
     width: 50%;
@@ -41,8 +41,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    margin-top: 10%
+    padding: 5% 20px 0;
 }
+
 
 .set-login {
     text-align: center;
@@ -54,10 +55,9 @@ body {
 }
 
 .membership-login {
-    border: 1px solid black;
-    padding: 10px;
-    width: 450px;
-    height: 290px;
+    border: 1px solid #2e2e2e;
+    padding: 30px 10px;
+    width: 90%;
     margin: 0px auto 30px;
     display: flex;
     flex-direction: column;
@@ -67,6 +67,21 @@ body {
 
 form {
     text-align: center;
+}
+
+.submit-btn {
+    width: 100px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: gray;
 }
 
 .membership-login p {
