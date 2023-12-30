@@ -360,33 +360,30 @@ section {
 .slideshow-container {
     position: relative;
     margin: 0 10%;
-    width: 80%;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    justify-items: center;
+    padding: 0 20%;
 }
 
 .singleSlide {
-    grid-template-rows: auto auto auto;
-    margin: 60px;
+    padding: 50px;
+    border: 1px solid #211E1E;
     text-align: center;
 }
 
+.singleSlide-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
 .singleSlide img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
 }
 
-.product-name {
-    font-weight: bold;
-}
 
 .product-price {
     color: green;
-    margin: 15px;
 }
 
 .product-name,
@@ -444,6 +441,7 @@ section {
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+    justify-content: center;
 }
 
 @keyframes fade {
@@ -459,13 +457,12 @@ section {
 .add-to-cart-btn {
     background-color: #331f10;
     width: 80px;
-    height: 80px;
+    height: 40px;
     color: #fff;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 15px 15px 15px auto;
 }
 
 .add-to-cart-btn:hover {
