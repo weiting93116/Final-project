@@ -6,6 +6,16 @@
     <title>back</title>
     <link rel="stylesheet" href="../Final-project-main/CSS/back.css">
     <script src="../Final-project-main/JS/back.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#accordion").accordion({
+            collapsible: true,
+            heightStyle: "content"
+        });
+    });
+    </script>
 </head>
 <body>
     <header>
@@ -15,7 +25,14 @@
         </div>
         <div class="header_list">
             <a href="../Final-project-main/index.html" class="header_text">首頁</a>
-            <a href="../Final-project-main/goods.html" class="header_text">商店</a>
+            <li class="has-submenu"> 
+                <a href="../Final-project-main/goods.html">產品商店</a>
+                <ul class="submenu">
+                    <li><a href="../Final-project-main/goods.html#tab01">茶葉</a></li>
+                    <li><a href="../Final-project-main/goods.html#tab02">茶具</a></li>
+                    <li><a href="../Final-project-main/goods.html#tab03">禮盒</a></li>
+                </ul>
+            </li>
             <a href="" class="header_text">關於我們</a>
         </div>
         <div class="cart_and_membership">
@@ -37,16 +54,28 @@
     <section id="memberList" class="memberlist">
         <h2>會員列表&資料</h2>
         <div class="member-title">
-            <div id="user">使用者名稱</div>
-            <div id="gender">性別</div>
+            <div id="user">姓名</div>
+            <div id="call">電話</div>
             <div id="mailAddress">電子郵件</div>
         </div>
-        <div class="ex1">
-            <div id="user1">aaa</div>
-            <div id="gender1">M</div>
-            <div id="mailAddress1">aaa123</div>
+        <div id="accordion" class="ex1">
+            <div class="member">
+                <div id="user1"">aaa</div>
+                <div id="call1">0912345678</div>
+                <div id="mailAddress1">aaa123</div>
+            </div>
+            <div class="hidden">
+                <div class="hidden-title">
+                    <div id="number">訂單編號</div>
+                    <div id="money">訂單金額</div>
+                </div>
+                <div class="hidden-content">
+                    <div id="orderName">商品A</div>
+                    <div id="orderAmount">$350</div>
+                </div>
+                <input type="button" value="刪除">
+            </div>
         </div>
-        
     </section>
 
     <footer>

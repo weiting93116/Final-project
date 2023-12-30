@@ -155,10 +155,11 @@ header a {
     background-color: #211E1E;
     color: white;
     padding: 10px;
-    height: 40px;
+    height: 50px;
+    font-size: 20px;
     display: grid;
-    grid-template-columns: 25% 20% auto;
-    grid-template-rows: repeat(auto-fit, minmax(auto,1fr));
+    grid-template-columns: 25% 30% auto;
+    grid-auto-flow: row;
 }
 
 #user {
@@ -166,7 +167,7 @@ header a {
     grid-row: 0/1;
 }
 
-#gender {
+#call {
     grid-column: 2/3;
     grid-row: 0/1;
 }
@@ -177,20 +178,85 @@ header a {
 }
 
 .ex1 {
-    color: lightblue;
-    font-size: 40px;
+    position: relative;
+    top: 60px;
+    color: #000;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.member {
+    display: grid;
+    grid-template-columns: 25% 30% auto;
+    grid-auto-flow: row;
 }
 
 #user1 {
     grid-column: 1/2;
+    grid-row: 0/1;
+    cursor: pointer;
 }
 
-#gender1 {
+#call1 {
     grid-column: 2/3;
+    grid-row: 0/1;
 }
 
-#mailAddress {
+#mailAddress1 {
     grid-column: 3/4;
+    grid-row: 0/1;
+}
+
+.hidden {
+    width: 50%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.hidden-title {
+    background-color: #d9d9d9;
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-auto-flow: row;
+}
+
+#number {
+    grid-column: 1/2;
+    grid-row: 0/1;
+}
+
+#money {
+    grid-column: 2/3;
+    grid-row: 0/1;
+}
+
+.hidden-content {
+    font-size: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-auto-flow: row;
+}
+
+#orderName {
+    grid-column: 1/2;
+    grid-row: 0/1;
+}
+
+#orderAmount {
+    grid-column: 2/3;
+    grid-row: 0/1;
+}
+
+.hidden input {
+    font-size: 15px;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 /*FOOTER*/
