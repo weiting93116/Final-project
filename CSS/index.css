@@ -718,6 +718,10 @@ li {
         height: 1000vh;
     }
 
+    main {
+        width: 80%;
+    }
+
     .logo-text img {
         width: 60%;
     }
@@ -727,7 +731,8 @@ li {
     }
 
     .card-container {
-        margin: 4%;
+        margin: 5%;
+        padding: 5%;
         justify-content: space-around;
         gap: 10px;
     }
@@ -735,13 +740,13 @@ li {
     .card {
         width: 170px;
         height: 300px;
-        margin: 10% 20%;
+        margin: 5%;
     }
 
     .about-us-content {
         display: block;
-        margin: 3% 35%;
-        font-size: 15px;
+        margin: 3% 40%;
+        font-size: 12px;
     }
 
     .about-us-btn {
@@ -760,6 +765,10 @@ li {
     #topBtn {
         bottom: 10px;
 
+    }
+
+    footer {
+        font-size: 11px;
     }
 
     .footer_logo img {
