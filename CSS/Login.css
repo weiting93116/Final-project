@@ -19,6 +19,8 @@ body {
 
     .login-photo {
         width: 100% !important;
+        height: 450px;
+        overflow: hidden;
     }
 
     .login-text {

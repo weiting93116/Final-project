@@ -19,6 +19,8 @@ body {
 
     .register-photo {
         width: 100% !important;
+        height: 450px;
+        overflow: hidden;
     }
 
     .register-text {
