@@ -23,7 +23,7 @@ main {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 
     .header_list,
     .header_text,
@@ -38,6 +38,10 @@ main {
     .web_tags a,
     .menu {
         display: none;
+    }
+
+    .container {
+        width: 100%;
     }
 
     /*header*/
@@ -104,10 +108,7 @@ main {
         align-items: center;
     }
 
-    .content {
-        border-radius: 8px;
-        width: 100vw;
-    }
+
 
     /*footer*/
 
@@ -272,10 +273,8 @@ header {
 }
 
 .content {
-    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 80vw;
 }
 
 #tea-content {
