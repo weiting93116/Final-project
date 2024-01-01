@@ -9,7 +9,7 @@ body {
     font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
     .register-container {
         width: 100%;
@@ -19,7 +19,6 @@ body {
 
     .register-photo {
         width: 100% !important;
-        height: 450px;
         overflow: hidden;
     }
 
@@ -44,7 +43,7 @@ body {
 
 .register-photo img {
     width: 100%;
-    height: fit-content;
+    height: auto;
     object-fit: cover;
 }
 

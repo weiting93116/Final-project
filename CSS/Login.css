@@ -9,7 +9,7 @@ body {
     font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
     .login-container {
         width: 100%;
@@ -19,7 +19,6 @@ body {
 
     .login-photo {
         width: 100% !important;
-        height: 450px;
         overflow: hidden;
     }
 
