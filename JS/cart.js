@@ -23,6 +23,7 @@ function updateCart() {
             <span>${item.quantity}</span>
             <button onclick="updateQuantity(${item.id}, 1)">＋</button>
         </div>
+        <div class="cart-item-total">$${item.price * item.quantity}</div>
         <div class="cart-item-delete" onclick="removeItem(${item.id})">刪除</div>
     `;
     cartItemsContainer.appendChild(cartItemElement);
