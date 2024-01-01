@@ -16,7 +16,7 @@ function updateCart() {
     const cartItemElement = document.createElement('div');
     cartItemElement.classList.add('cart-item');
     cartItemElement.innerHTML = `
-        <img src="image/greentea.jpg" alt=""><span>${item.name}</span>
+        <div class="cart-item-name"><img src="image/greentea.jpg" alt=""><span>${item.name}</span></div>
         <div class="cart-item-price">$${item.price}</div>
         <div class="cart-item-quantity">
             <button onclick="updateQuantity(${item.id}, -1)">－</button>
