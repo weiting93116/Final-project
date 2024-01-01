@@ -7,6 +7,8 @@
     <title>顧客評價</title>
     <link rel="stylesheet" href="CSS/Reviewmessageboard.css">
     <script src="JS/Reviewmessage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
     <header>
@@ -39,6 +41,21 @@
                     <p>會員登入/註冊</p>
                 </a>
             </div>
+        </div>
+
+        <!--行動裝置選單-->
+        <div class="sidebar-container">
+            <div class="sidebar-btn" onclick="toggleSidebar()"><iconify-icon icon="mingcute:menu-fill"></iconify-icon></div>
+            <!-- 其他header內容 -->
+            <div class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+                <div class="sidebar-option"><a href="index.html">首頁</a></div>
+                <div class="sidebar-option"><a href="goods.html">產品商店</a></div>
+                <div class="sidebar-option"><a href="about.html">關於我們</a></div>
+                <div class="sidebar-option"><a href="cart.html">購物車</a></div>
+                <div class="sidebar-option"><a href="Login.html">會員登入/註冊</a></div>
+            </div>
+            <script src="JS/header.js"></script>
         </div>
     </header>
 
@@ -106,8 +123,8 @@
             <input type="radio" name="star" id="star4"><label for="star4"></label>
             <input type="radio" name="star" id="star5"><label for="star5"></label>
         </div>
-        <textarea name="memo" cols="80" rows="5" wrap="hard"> </textarea>
-        <p><input type="submit" value="送出" onclick="showConfirmation()"/></p>
+        <textarea name="memo" cols="45" rows="5" wrap="hard"> </textarea>
+        <input type="submit" value="送出" onclick="showConfirmation()" class="rate-submit"/>
     </div>
 
 

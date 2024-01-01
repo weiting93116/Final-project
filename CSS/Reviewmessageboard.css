@@ -8,6 +8,118 @@ body {
     font-family: 微軟正黑體;
 }
 
+.sidebar-container {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header_list,
+    .header_text,
+    .has-submenu,
+    .submenu,
+    .cart_and_membership,
+    .cartnav,
+    .membershipnav,
+    .cart_and_membership p,
+    .cart_and_membership img,
+    .web_tags,
+    .web_tags a,
+    .menu {
+        display: none;
+    }
+
+    /*header*/
+    .logo_text {
+        font-size: 10pt;
+    }
+
+    .sidebar-container {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar-btn:hover {
+        background-color: #302d2d;
+    }
+
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #211E1E;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1;
+    }
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar-option:hover {
+        background-color: #302d2d;
+        color: #211E1E;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    /*body*/
+    table {
+        font-size: 12pt;
+    }
+
+    .order {
+        font-size: 12pt;
+    }
+
+    .member-purchase-history,
+    .rating-area {
+        width: 95% !important;
+    }
+
+    /*footer*/
+
+    .footer_logo {
+        position: relative;
+        left: 20%;
+    }
+
+    .privacy-policy {
+        font-size: 8pt;
+    }
+}
+
 /*header*/
 header {
     width: 100%;
@@ -150,19 +262,20 @@ header {
 .member-purchase-history,
 .rating-area {
     border: 1px solid #000;
-    font-size: 20px;
+    font-size: 16pt;
     padding: 10px;
-    width: 800px;
+    width: 80%;
     height: fit-content;
     margin: 20px auto 10px;
     overflow: auto;
+    display: flex;
+    justify-content: center;
 }
 
 
 .order {
     padding: 10px;
-    width: 750px;
-    margin: 20px auto 10px;
+    width: 90%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -171,6 +284,14 @@ header {
 .order-status {
     background-color: #d39999;
     color: white;
+}
+
+table {
+    width: 100%;
+}
+
+.order tr {
+    width: 100%;
 }
 
 .order th,
@@ -190,24 +311,21 @@ header {
 .goods-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
+    justify-content: flex-start;
+    padding: 20px 0;
+    gap: 20px;
 }
 
 .order img {
     width: 20%;
-    height: 20%;
-    margin-right: 382px;
 }
 
 .goods-name {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 10px;
     text-align: left;
     white-space: nowrap;
-    transform: translateX(-382px);
 }
 
 
@@ -270,6 +388,19 @@ header {
     align-items: center;
     justify-content: center;
     padding-bottom: 10%;
+}
+
+.rate-submit {
+
+    width: 100px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
 }
 
 .back {

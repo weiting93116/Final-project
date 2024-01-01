@@ -7,6 +7,7 @@
     <title>商品介紹</title>
     <link rel="stylesheet" href="CSS/good.css">
     <script src="JS/good.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -41,6 +42,22 @@
             </a>
         </div>
     </div>
+
+    <!--行動裝置選單-->
+    <div class="sidebar-container">
+      <div class="sidebar-btn" onclick="toggleSidebar()"><iconify-icon icon="mingcute:menu-fill"></iconify-icon></div>
+      <!-- 其他header內容 -->
+      <div class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+          <div class="sidebar-option"><a href="index.html">首頁</a></div>
+          <div class="sidebar-option"><a href="goods.html">產品商店</a></div>
+          <div class="sidebar-option"><a href="about.html">關於我們</a></div>
+          <div class="sidebar-option"><a href="cart.html">購物車</a></div>
+          <div class="sidebar-option"><a href="Login.html">會員登入/註冊</a></div>
+      </div>
+      <script src="JS/header.js"></script>
+  </div>
+
 </header>
 
   <main>
@@ -78,10 +95,10 @@
                         <input type="text" id="quantity" value="1" min="1" max="50">
                         <input type="button" value="+" class="quantity-btn" id="increment">
                   </div>
-                    <p>
-                      <input type="button" value="直接購買" class="buy-btn">
-                      <input type="button" value="加入購物車" class="cart-btn" id="addToCart">
-                    </p>
+                  <div class="btn">
+                    <input type="button" value="直接購買" class="buy-btn">
+                    <input type="button" value="加入購物車" class="cart-btn" id="addToCart">
+                  </div>
               </div>
           </div>
         </div>
