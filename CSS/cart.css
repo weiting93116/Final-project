@@ -18,6 +18,103 @@ body {
     min-height: 100vh;
 }
 
+.sidebar-container {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        width: 100vw;
+    }
+
+    .header_list,
+    .header_text,
+    .has-submenu,
+    .submenu,
+    .cart_and_membership,
+    .cartnav,
+    .membershipnav,
+    .cart_and_membership p,
+    .cart_and_membership img,
+    .web_tags,
+    .web_tags a,
+    .menu {
+        display: none;
+    }
+
+    /*header*/
+    .logo_text {
+        font-size: 10pt;
+    }
+
+    .sidebar-container {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #211E1E;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1;
+    }
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .checkout-container {
+        width: 100% !important;
+    }
+
+    /*footer*/
+
+    .footer_logo {
+        position: relative;
+        left: 20%;
+    }
+
+    .privacy-policy {
+        font-size: 8pt;
+    }
+}
+
 /*header*/
 header {
     width: 100%;
@@ -137,7 +234,7 @@ header {
 
 /* cart */
 .checkout-container {
-    max-width: 70%;
+    width: 70%;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
