@@ -60,8 +60,24 @@
                         <div>刪除</div>
                     </div>
                     <!-- 此處添加購物車的內容-->
-                    
-                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-items" id="item1">
+                        <div class="cart-item"><img src="image/greentea.jpg" alt=""><span>極品綠茶</span></div>
+                        <div class="cart-item"><span>$350</span></div>
+                        <div class="cart-item">
+                            <input type="button" value="-">
+                            <span>1</span>
+                            <input type="button" value="+">
+                        </div>
+                        <div class="cart-item"><span>$350</span></div>
+                        <div class="cart-item">
+                            <input type="button" value="刪除" onclick="removeItem(item1)">
+                        </div>
+                    </div>
+
+                    <!--JS購物車內容
+                    <div class="carts-items" id="cart-items"></div>-->
+
+                    <!--總金額-->
                     <div class="cart-total">總金額: $<span id="total-price">0</span></div>
                     <div class="button"><input type="button" value="下一步" onclick="nextStep()" class="cart-btn"></div>
                     <script src="JS/cart.js"></script>
@@ -81,7 +97,7 @@
                             <select>
                                 <option>選項</option>
                                 <option>宅配</option>
-                                <option>貨到付款</option>
+                                <option>超商取貨</option>
                             </select>
                         </div>
                     </div>
@@ -111,6 +127,34 @@
                 <div id="step3" class="step">
                     <h2>確認訂單</h2>
                     <!-- 此處添加付款的內容 -->
+                    <div class="check-order">
+                        <div>
+                            <div class="check-order-title">商品資訊</div>
+                            <div class="goods">
+                                <div>商品</div>
+                                <div>單價</div>
+                                <div>數量</div>
+                                <div>合計</div>
+                                <div>刪除</div>
+                            </div>
+                            <div class="check-order-cart">
+                                <div class="cart-item"><img src="image/greentea.jpg" alt=""><span>極品綠茶</span></div>
+                                <div class="cart-item"><span>$350</span></div>
+                                <div class="cart-item"><span>1</span></div>
+                                <div class="cart-item"><span>$350</span></div>
+                            </div>
+                            <div class="cart-total">總金額: $<span id="total-price">350</span></div>
+                        </div>
+                        <div class="check-order-infor">
+                            <div class="check-order-title">收貨資訊</div>
+                            <span>收件人姓名：</span><!--這裡要顯示收件人姓名-->
+                            <span>電話：</span><!--這裡要顯示電話-->
+                            <span>電子郵件：</span><!--這裡要顯示電子郵件-->
+                            <span>取貨方式：</span><!--這裡要顯示取貨方式-->
+                            <span>付款方式：</span><!--這裡要顯示付款方式-->
+                        </div>
+                    </div>
+
                     <div class="button">
                         <input type="button" value="上一步" onclick="prevStep()" class="cart-btn">&nbsp;
                         <input type="submit" value="完成結帳" onclick="completeCheckout()" class="cart-btn">

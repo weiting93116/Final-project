@@ -179,7 +179,7 @@ header {
 
 /*步驟一*/
 .goods {
-    background-color: #211E1E;
+    background-color: #5C5656;
     color: white;
     height: 40px;
     padding: 7px;
@@ -187,16 +187,12 @@ header {
     justify-content: space-around;
 }
 
-.cart-items {
+.carts-items {
     border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
+    padding: 10px 0;
 }
 
-a {
-    color: #211E1E;
-}
-
-.cart-item {
+.carts-item {
     height: 100px;
     display: flex;
     align-items: center;
@@ -204,7 +200,36 @@ a {
     padding: 10px 0;
 }
 
+.cart-items,
+.check-order-cart {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.cart-item input,
+.carts-item button,
+.carts-item-delete {
+    width: 40px;
+    background-color: #5C5656;
+    color: white;
+}
 
 .cart-total {
     text-align: right;
@@ -271,6 +296,24 @@ a {
 
 .cart-Remark textarea {
     font-size: 20px;
+}
+
+/*步驟三*/
+.check-order {
+    padding: 5% 10%;
+}
+
+.check-order-infor {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    gap: 20px;
+}
+
+.check-order-title {
+    margin-bottom: 20px;
+    background-color: #5C5656;
+    color: white;
 }
 
 /*回首頁、搜尋*/

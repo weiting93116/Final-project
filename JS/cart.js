@@ -1,7 +1,7 @@
 // 定義購物車商品陣列
 const cartItems = [
-    { id: 1, name: '商品A', price: 10, quantity: 2 },
-    { id: 2, name: '商品B', price: 15, quantity: 1 },
+    { id: 1, name: '極品綠茶', price:350, quantity: 2 },
+    { id: 2, name: '極品紅茶', price:350, quantity: 1 },
     // 可以添加更多的購物車項目
   ];
   
@@ -13,22 +13,22 @@ const cartItems = [
     let totalPrice = 0;
     // 清空購物車容器
     cartItemsContainer.innerHTML = '';
-    // 遍歷購物車商品
+
     cartItems.forEach(item => {
       // 創建購物車商品元素
       const cartItemElement = document.createElement('div');
-      cartItemElement.classList.add('cart-item');
+      cartItemElement.classList.add('carts-item');
       // 設置購物車商品元素的HTML內容
       cartItemElement.innerHTML = `
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-price">$${item.price}</div>
-        <div class="cart-item-quantity">
+        <div class="carts-item-name">${item.name}</div>
+        <div class="carts-item-price">$${item.price}</div>
+        <div class="carts-item-quantity">
           <button onclick="decreaseQuantity(${item.id})">－</button>
           <span>${item.quantity}</span>
           <button onclick="increaseQuantity(${item.id})">＋</button>
         </div>
-        <div class="cart-item-total">$${item.price * item.quantity}</div>
-        <div class="cart-item-delete" onclick="removeItem(${item.id})"><a href="#">刪除</a></div>
+        <div class="carts-item-total">$${item.price * item.quantity}</div>
+        <div class="carts-item-delete" onclick="removeItem(${item.id})">刪除</div>
       `;
       // 將購物車商品元素添加到購物車容器中
       cartItemsContainer.appendChild(cartItemElement);
