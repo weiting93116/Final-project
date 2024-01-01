@@ -60,19 +60,23 @@
                         <div>刪除</div>
                     </div>
                     <!-- 此處添加購物車的內容-->
-                    <div class="cart-items" id="item1">
-                        <div class="cart-item"><img src="image/greentea.jpg" alt=""><span>極品綠茶</span></div>
-                        <div class="cart-item"><span>$350</span></div>
-                        <div class="cart-item">
-                            <input type="button" value="-">
-                            <span>1</span>
-                            <input type="button" value="+">
+                    <div class="cart-items" id="cart-items">
+                        <!-- ... 其他購物車項目 ... -->
+                        <div class="cart-item" data-id="1">
+                            <img src="image/greentea.jpg" alt=""><span>極品綠茶</span>
+                            <div class="cart-item-price">$350</div>
+                            <div class="cart-item-quantity">
+                                <button onclick="updateQuantity(1, -1)">－</button>
+                                <span>1</span>
+                                <button onclick="updateQuantity(1, 1)">＋</button>
+                            </div>
+                            <div class="cart-item-total">$350</div>
+                            <div class="cart-item-delete" onclick="removeItem(1)">刪除</div>
                         </div>
-                        <div class="cart-item"><span>$350</span></div>
-                        <div class="cart-item">
-                            <input type="button" value="刪除" onclick="removeItem(item1)">
-                        </div>
-                    </div>
+                    
+                </div>
+                    
+                    
 
                     <!--JS購物車內容
                     <div class="carts-items" id="cart-items"></div>-->
