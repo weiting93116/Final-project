@@ -3,7 +3,7 @@ function toggleSidebar() {
 }
 
 function openSidebar() {
-    $(".sidebar").css("width", "90%");
+    $(".sidebar").css("width", "100%");
 }
 
 function closeSidebar() {

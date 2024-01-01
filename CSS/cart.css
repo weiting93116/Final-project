@@ -51,7 +51,7 @@ body {
     .sidebar-container {
         width: 100%;
         position: absolute;
-        top: 0;
+        top: 5px;
         right: 0;
         display: flex;
         flex-direction: column;
@@ -61,8 +61,16 @@ body {
         width: 30px;
         height: 30px;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 10px;
+        right: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar-btn:hover {
+        background-color: #302d2d;
     }
 
     .sidebar {
@@ -87,8 +95,9 @@ body {
         transition: 0.3s;
     }
 
-    .sidebar a:hover {
-        color: #f1f1f1;
+    .sidebar-option:hover {
+        background-color: #302d2d;
+        color: #211E1E;
     }
 
     .sidebar .closebtn {
