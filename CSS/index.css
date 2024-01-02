@@ -744,7 +744,7 @@ li {
 
     .sidebar-btn {
         width: 30px;
-        height: 30px;
+        height: 0px;
         position: absolute;
         top: 0px;
         right: 0px;
@@ -802,6 +802,21 @@ li {
 
     /*body*/
 
+    /*輪播圖*/
+    .carousel-container {
+        border: 30px solid #211E1E;
+    }
+
+    .carousel-controls {
+        bottom: 17px;
+    }
+
+    .carousel-controls label {
+        width: 7px;
+        height: 7px;
+        margin: 0 5px;
+    }
+
     /*來找茶*/
     .findtea-title {
         font-size: 25px;
@@ -844,7 +859,7 @@ li {
         height: 45px;
         width: 150px;
         margin: 30px;
-        margin-left: 0;
+        margin-left: 0%;
     }
 
     /*熱銷排行*/
