@@ -353,3 +353,123 @@ footer {
     background-color: #2e2e2e;
     color: #fff;
 }
+
+.sidebar-container {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header_list,
+    .header_text,
+    .has-submenu,
+    .submenu,
+    .cart_and_membership,
+    .cartnav,
+    .membershipnav,
+    .cart_and_membership p,
+    .cart_and_membership img,
+    .web_tags,
+    .web_tags a,
+    .menu {
+        display: none;
+    }
+
+    /*header*/
+    .logo_text {
+        font-size: 10pt;
+    }
+
+    .sidebar-container {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar-btn:hover {
+        background-color: #302d2d;
+    }
+
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #211E1E;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1;
+    }
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar-option:hover {
+        background-color: #302d2d;
+        color: #211E1E;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    /*body*/
+
+    .personal-information {
+        font-size: 14px;
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .basic-text,
+    .member-purchase-history,
+    .member-comment-history {
+        font-size: 12px;
+        padding: 10px;
+        width: 85vw;
+        margin: 0 auto 30px;
+    }
+
+    .scoring-content {
+        padding: 10px 30px;
+        width: 100%;
+    }
+
+    /*footer*/
+
+    .footer_logo {
+        position: relative;
+        left: 20%;
+    }
+
+    .privacy-policy {
+        font-size: 8pt;
+    }
+}
