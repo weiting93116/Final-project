@@ -844,6 +844,7 @@ li {
         height: 45px;
         width: 150px;
         margin: 30px;
+        margin-left: 0;
     }
 
     /*熱銷排行*/
