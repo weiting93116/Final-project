@@ -25,14 +25,14 @@ body {
         background-color: rgba(61, 53, 53, 0.467);
     }
 
+    .login-text img {
+        border-radius: 50%;
+    }
+
     .login-text {
         text-align: center;
         width: 100% !important;
         color: #d9d9d9;
-    }
-
-    .membership-login {
-        color: white;
     }
 
     .no-membership a {

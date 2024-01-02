@@ -21,6 +21,9 @@ body {
         display: none;
     }
 
+    .register-logo img {
+        border-radius: 50%;
+    }
 
     .register-text {
         text-align: center;
