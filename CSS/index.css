@@ -805,6 +805,7 @@ li {
     /*輪播圖*/
     .carousel-container {
         border: 30px solid #211E1E;
+        box-sizing: border-box;
     }
 
     .carousel-controls {
