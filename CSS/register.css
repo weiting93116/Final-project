@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 標楷體;
 }
 
 body {
-    font-family: 標楷體;
     font-size: 20px;
 }
 
@@ -22,7 +22,7 @@ body {
     }
 
     .register-logo img {
-        border-radius: 50%;
+        max-width: 50%;
     }
 
     .register-text {
