@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 商品名称
+    // 商品名稱
     const productName = "極品綠茶"; // 请替换为实际的商品名称
   
-    // 库存数量
+    // 庫存數量
     let stock = 50;
   
-    // 加减按钮和数量输入框
+    // 加減按鈕和數量輸入框
     const decrementBtn = document.getElementById('decrement');
     const incrementBtn = document.getElementById('increment');
     const quantityInput = document.getElementById('quantity');

@@ -4,12 +4,6 @@
     padding: 0;
 }
 
-
-.Product {
-    display: flex;
-    flex-direction: column;
-}
-
 .sidebar-container {
     display: none;
 }
@@ -97,6 +91,11 @@
     }
 
     /*body*/
+
+    .Product {
+        width: 100% !important;
+    }
+
     .product-container {
         display: flex;
         flex-direction: column;
@@ -266,9 +265,16 @@ li {
 
 /*good*/
 main {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+}
+
+
+.Product {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -278,6 +284,7 @@ section {
 
 .product-container {
     display: flex;
+    justify-content: center;
 }
 
 #gallery,
