@@ -733,17 +733,6 @@ li {
         display: none;
     }
 
-    /*header*/
-    .logo_text {
-        font-size: 10pt;
-    }
-
-
-    .logo_text,
-    .cart_and_membership,
-    .menu {
-        display: none;
-    }
 
     .sidebar-container {
         width: 100%;
@@ -804,6 +793,7 @@ li {
         font-size: 36px;
         margin-left: 50px;
     }
+
 
     /*body*/
 
