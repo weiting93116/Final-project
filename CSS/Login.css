@@ -32,7 +32,11 @@ body {
     }
 
     .membership-login {
-        background-color: #ffffff67;
+        color: white;
+    }
+
+    .no-membership a {
+        color: #fff;
     }
 
     body {

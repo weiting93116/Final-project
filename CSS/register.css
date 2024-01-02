@@ -18,13 +18,19 @@ body {
     }
 
     .register-photo {
-        width: 100% !important;
-        overflow: hidden;
+        display: none;
     }
+
 
     .register-text {
         text-align: center;
         width: 100% !important;
+        background-color: #2e2e2e;
+        color: #fff;
+    }
+
+    .membership-register a {
+        color: white;
     }
 }
 
