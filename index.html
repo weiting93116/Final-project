@@ -7,6 +7,8 @@
     <title>找茶</title>
     <link rel="stylesheet" href="CSS/index.css">
     <script src="JS/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
     
@@ -48,6 +50,21 @@
                     <p>會員登入/註冊</p>
                 </a>
             </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="sidebar-btn" onclick="toggleSidebar()"><iconify-icon icon="mingcute:menu-fill"></iconify-icon></div>
+            <!-- 其他header內容 -->
+            <div class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+                <div><a href="index.html">首頁</a></div>
+                <div><a href="goods.html">產品商店</a></div>
+                <div><a href="about.html">關於我們</a></div>
+                <div><a href="cart.html">購物車</a></div>
+                <div><a href="Login.html">會員登入/註冊</a></div>
+                <div><a href="memberships.html">會員資訊</a></div>
+            </div>
+            <script src="JS/header.js"></script>
         </div>
     </nav>
     
