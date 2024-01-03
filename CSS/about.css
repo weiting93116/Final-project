@@ -236,8 +236,7 @@ li {
     color: #fff;
 }
 
-/*成員*/
-
+/* 成員 */
 .about-us {
     margin: 30px 10%;
 }
@@ -257,24 +256,47 @@ li {
     justify-content: space-around;
 }
 
-.member img {
-    width: 250px;
-    height: 300px;
-    border-radius: 10%;
+.member {
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
 }
 
-.member img:hover {
+.member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.member:hover img {
     transform: scale(1.15);
 }
 
-h3,
-.member p {
-    color: #211E1E;
+.about-us-think {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #211E1E;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    color: #fff;
 }
 
-.about-us-think {
-    padding: 30px;
+.member:hover .about-us-think {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
 }
+
+.main {
+    text-align: center;
+}
+
+
 
 /*FOOTER*/
 footer {
@@ -284,6 +306,7 @@ footer {
     height: fit-content;
     padding: 15px;
     bottom: 0;
+    position: relative;
 }
 
 .footer_logo {
