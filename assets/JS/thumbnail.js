@@ -1,4 +1,4 @@
-const images = ["image/greentea.jpg", "image/Jingshenyu1.jpg", "image/Jingshenyu3.jpg"];
+const images = ["../../assets/image/greentea.jpg", "../../assets/image/Jingshenyu1.jpg", "../../assets/image/Jingshenyu3.jpg"];
     let currentImageIndex = 0;
 
     // 更換圖片

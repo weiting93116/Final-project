@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="icon" href="../../assets/icon/teatop.png" type="image/x-icon" /><!--標題欄logo-->
+    <link rel="stylesheet" href="../../assets/CSS/blockelelment.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script><!--引用jquery-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script><!--引用iconify-icon-->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="../../assets/image/teatop.jpg"></a>
+            <p class="logo_text">找茶<br>FIND &nbsp; TEA</p>
+        </div>
+        <div class="header_list">
+            <a href="index.html" class="header_text">首頁</a>
+            <li class="has-submenu"> 
+                <a href="goods.html">產品商店</a>
+                <ul class="submenu">
+                    <li><a href="goods.html#tab01">茶葉</a></li>
+                    <li><a href="goods.html#tab02">茶具</a></li>
+                    <li><a href="goods.html#tab03">禮盒</a></li>
+                </ul>
+            </li>
+            <a href="about.html" class="header_text">關於我們</a>
+        </div>
+        <div class="cart_and_membership">
+            <div class="cartnav">
+                <img src="../../assets/icon/shopping-cart.png">&nbsp;&nbsp;
+                <a href="cart.html">
+                    <p>購物車</p>
+                </a>
+            </div>
+            <div class="membershipnav">
+                <img src="../../assets/icon/avatar.png">&nbsp;&nbsp;
+                <a href="Login.html">
+                    <p>會員登入/註冊</p>
+                </a>
+            </div>
+        </div>
+
+        <!--行動裝置選單-->
+        <div class="sidebar-container">
+            <div class="sidebar-btn" onclick="toggleSidebar()"><iconify-icon icon="mingcute:menu-fill"></iconify-icon></div>
+            <!-- 其他header內容 -->
+            <div class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+                <div><a href="index.html">首頁</a></div>
+                <div><a href="goods.html">產品商店</a></div>
+                <div><a href="about.html">關於我們</a></div>
+                <div><a href="cart.html">購物車</a></div>
+                <div><a href="Login.html">會員登入/註冊</a></div>
+                <div><a href="memberships.html">會員資訊</a></div>
+            </div>
+            <script src="../../assets/JS/header.js"></script>
+        </div>
+
+    </header>
+
+    <main>
+      <input type="button" value="🔍" id="searchbtn">
+      <div id="searchBox">
+        <input type="text" id="placeholder" value="輸入產品名稱">
+        <input type="button" value="&times;" id="closeSearchBox">
+        <input type="button" value="搜尋" id="submitSearch">
+      </div>
+      <script src="../../assets/JS/blockelement.js"></script>
+      <a href="../page/index.html"><input type="button" id="homeBtn" value="🏠"></a>
+    </main>
+
+    <footer>
+        <div class="menu">
+            <div class="footer_logo">
+                <img src="../../assets/image/teatop.jpg">
+            </div>
+            <div class="web_tags">
+                <h2><a href="index.html">首頁</a></h2>
+                <a href="index.html#find-tea">來找茶</a><br>
+                <a href="index.html#about-us">團隊</a><br>
+                <a href="index.html#hot">熱銷排行</a><br>
+                <a href="index.html#find-tea-set">找茶具</a><br>
+                <a href="index.html#map">來品茶</a>
+            </div>
+            <div class="web_tags">
+                <h2><a href="goods.html">產品商店</a></h2>
+                <a href="goods.html#tab01">茶葉</a><br>
+                <a href="goods.html#tab02">茶具</a><br>
+                <a href="goods.html#tab03">禮盒</a>
+            </div>
+            <div class="web_tags">
+                <h2><a href="about.html">關於我們</a></h2>
+                <a href="about.html#front">前端-甲班</a><br>
+                <a href="about.html#back">後端-乙班</a>
+            </div>
+            <div class="web_tags">
+                <h2><a href="Login.html">購物車/會員</a></h2>
+                <a href="cart.html">購物清單</a><br>
+                <a href="memberships.html#basic-information">基本資料</a><br>
+                <a href="Reviewmessageboard.html">購買紀錄</a><br>
+                <a href="memberships.html#comment-history">歷史評價</a>
+            </div>
+        </div>
+
+        <div class="privacy-policy">
+            <p>隱私權政策@2023 林晨萱 吳庭儀 曾瑋婷 李聰源 吳柏慶 潘沛伶 李草芽</p>
+        </div>
+    </footer>
+</body> 
+</html>
