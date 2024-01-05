@@ -1,21 +1,22 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
     font-family: 標楷體;
 }
 
 body {
-
     font-size: 20px;
 }
 
+/* 響應式(螢幕畫面<=768px) */
 @media screen and (max-width: 1024px) {
 
     .login-container {
         width: 100%;
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
     }
 
     .login-photo {
@@ -74,8 +75,11 @@ body {
 .login-logo {
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     align-items: center;
+    /* 水平向上居中對齊 */
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     font-size: 30px;
     padding: 5% 20px 0;
 }
@@ -97,8 +101,11 @@ body {
     margin: 0px auto 30px;
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     align-items: center;
+    /* 水平向上居中對齊 */
     justify-content: center;
+    /* 對齊父容器垂直中線 */
 }
 
 form {
@@ -113,7 +120,9 @@ form {
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease;
+    /* 鼠標放在botton上後背景變色 */
 }
 
 .submit-btn:hover {
@@ -130,7 +139,6 @@ form {
 }
 
 #homeBtn {
-
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -140,11 +148,14 @@ form {
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
 }
 
 #homeBtn a {
     text-decoration: none;
+    /* 清除預設超連結樣式 */
     color: #000;
 }
 

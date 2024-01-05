@@ -702,6 +702,7 @@ footer {
     color: white;
     width: 100%;
     height: fit-content;
+    /* 使其高度配合內容所需最小高度 */
     padding: 15px;
     bottom: 0;
 }
@@ -731,6 +732,7 @@ footer {
 .web_tags a {
     color: white;
     text-decoration: none;
+    /* 清除超連結預設樣式 */
 }
 
 .privacy-policy {

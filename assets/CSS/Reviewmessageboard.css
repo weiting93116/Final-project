@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
 }
 
 body {
@@ -10,8 +10,10 @@ body {
 
 .sidebar-container {
     display: none;
+    /* 在>768px的畫面中隱藏側邊選單 */
 }
 
+/* 響應式(螢幕畫面<=768px) */
 @media screen and (max-width: 768px) {
 
     .header_list,
@@ -26,7 +28,7 @@ body {
     .web_tags,
     .web_tags a,
     .menu {
-        display: none;
+        display: none; /* 隱藏>768px時的header選單 */
     }
 
     /*header*/
@@ -36,11 +38,12 @@ body {
 
     .sidebar-container {
         width: 100%;
-        position: absolute;
+        position: absolute; /* 絕對定位 */
         top: 5px;
         right: 0;
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
     }
 
     .sidebar-btn {
@@ -52,7 +55,9 @@ body {
         color: white;
         display: flex;
         justify-content: center;
+        /* 對齊父容器垂直中線 */
         align-items: center;
+        /* 水平向上居中對齊 */
     }
 
     .sidebar-btn:hover {
@@ -60,32 +65,41 @@ body {
     }
 
     .sidebar {
-        width: 0;
+        width: 0; /* 側邊選單預設狀態 */
         height: 100%;
         position: fixed;
+        /* 設定側邊選單固定定位，使它相對於瀏覽器視窗固定 */
         top: 0;
         left: 0;
         background-color: #211E1E;
         overflow-x: hidden;
+        /* 選單未開啟時隱藏內容 */
         transition: 0.5s;
+        /* 設定轉場效果，使側邊選單的變化帶有0.5秒的過渡時間 */
         padding-top: 60px;
         z-index: 1;
+        /* 設定側邊選單的堆疊順序(數值越大越上層) */
     }
 
     .sidebar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
+        /* 移除超連結的預設文字底線效果 */
         font-size: 18px;
         color: white;
         display: block;
+        /* 將每個a標籤設為區塊元素(使padding生效) */
         transition: 0.3s;
+        /* 連結的漸變效果 */
     }
 
+    /* 將鼠標放在側邊選單按鈕上背景變色 */
     .sidebar-option:hover {
         background-color: #302d2d;
         color: #211E1E;
     }
 
+    /* 側邊選單的收縮按鈕位置 */
     .sidebar .closebtn {
         position: absolute;
         top: 0;
@@ -93,7 +107,6 @@ body {
         font-size: 36px;
         margin-left: 50px;
     }
-
     /*body*/
     table {
         font-size: 12pt;
@@ -105,11 +118,10 @@ body {
 
     .member-purchase-history,
     .rating-area {
-        width: 90% !important;
+        width: 90% !important;/* 可覆蓋其他width設定 */
     }
 
     /*footer*/
-
     .footer_logo {
         position: relative;
         left: 20%;
@@ -118,7 +130,7 @@ body {
     .privacy-policy {
         font-size: 8pt;
     }
-}
+}  
 
 /*header*/
 header {
@@ -128,13 +140,13 @@ header {
     color: white;
     position: relative;
     display: flex;
-
 }
 
 .header_list {
     width: 34%;
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     padding-top: 40px;
     gap: 10px;
 }
@@ -205,12 +217,14 @@ header {
 
 .submenu {
     opacity: 0;
+    /* 預設為透明度0 */
     visibility: hidden;
+    /* 預設為隱藏 */
     background-color: #333;
     color: #d9d9d9;
     position: absolute;
     transition: opacity 0.3s ease-in-out;
-    list-style-type: none;
+    /* 漸變效果 */
     padding: 0;
     margin: 0;
 }
@@ -222,6 +236,7 @@ header {
 .has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
+    /* 顯示子選單 */
 }
 
 .submenu a {
@@ -230,6 +245,7 @@ header {
     color: #d9d9d9;
     text-align: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 .submenu a:hover {
@@ -266,8 +282,10 @@ header {
     height: 500px;
     margin: 0 auto 10px;
     overflow: scroll;
+    /* 以滾動調顯示超出父容器的內容 */
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
 }
 
 .rating-area {
@@ -276,10 +294,13 @@ header {
     padding: 10px;
     width: 70%;
     height: fit-content;
+    /* 使其高度配合內容所需最小高度 */
     margin: 0 auto 10px;
     overflow: auto;
+    /* 自動添加滾動調 */
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
 }
 
 
@@ -287,8 +308,10 @@ header {
     padding: 10px;
     width: 90%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    /* 使子元素垂直排列 */
+    align-items: center;
+    /* 水平向上居中對齊 */
 }
 
 .order-status {
@@ -319,9 +342,11 @@ table {
 }
 
 .goods-container {
-    display: flex;
-    align-items: center;
+    display: flex;  
     justify-content: flex-start;
+    /* 首個子容器對齊父容器邊框 */
+    align-items: center;
+    /* 水平向上居中對齊 */
     padding: 20px 0;
     gap: 20px;
 }
@@ -332,26 +357,34 @@ table {
 
 .goods-name {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
+    /* 首個子容器對齊父容器邊框 */
+    align-items: center;
+    /* 水平向上居中對齊 */
     text-align: left;
     white-space: nowrap;
+    /* 保持內容為單行 */
 }
 
 
 .rating {
     margin: 0 auto 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
+    align-items: center;
+    /* 水平向上居中對齊 */
     transform: rotateY(180deg);
     transform-origin: center;
+    /* 星星翻轉效果 */
 }
 
 .rating-area {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    /* 使子元素垂直排列 */
+    align-items: center;
+    /* 水平向上居中對齊 */
 }
 
 .rating-area p {
@@ -366,6 +399,7 @@ table {
 
 .rating label::before {
     content: "\2605";
+    /* 星星的Unicode 字符寫法 */
     display: block;
     position: relative;
     font-size: 2em;
@@ -379,24 +413,31 @@ table {
     position: absolute;
     top: 0;
     font-size: 2em;
+    /* 相對父容器字體的大小(這裡是2倍) */
     color: #F5AB3E;
     opacity: 0;
+    /* 預設為透明度0 */
     transition: .5s;
+    /* 添加動態效果(0.5秒內) */
     text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    /* 輕微模糊陰影效果 */
 }
 
 .rating label:hover::after,
 .rating input:hover~label::after,
 .rating input:checked~label::after {
     opacity: 1;
+    /* 顯示星星 */
 }
 
 
 .rating-area textarea {
     margin: 0 auto 10px;
-    display: flex;
-    align-items: center;
+    display: flex;   
     justify-content: center;
+    /* 對齊父容器垂直中線 */
+    align-items: center;
+    /* 水平向上居中對齊 */
     padding-bottom: 10%;
 }
 
@@ -409,7 +450,9 @@ table {
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease;
+    /* 漸變效果 */
 
 }
 
@@ -425,82 +468,13 @@ a {
     color: #101010;
 }
 
-/*回首頁、搜尋*/
-#searchbtn {
-    position: fixed;
-    bottom: 65px;
-    right: 20px;
-    background-color: #d9d9d9;
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-
-#searchBox {
-    display: none;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    background-color: #fff;
-    padding: 10px;
-}
-
-#placeholder {
-    width: 200px;
-    padding: 8px;
-    margin-right: 8px;
-}
-
-#closeSearchBox {
-    background-color: #2e2e2e;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#submitSearch {
-    background-color: #2e2e2e;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#homeBtn {
-
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #d9d9d9;
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-#homeBtn a {
-    text-decoration: none;
-    color: #000;
-}
-
-#homeBtn:hover {
-    background-color: #2e2e2e;
-    color: #fff;
-}
-
 /*FOOTER*/
 footer {
     background-color: #211E1E;
     color: white;
     width: 100%;
     height: fit-content;
+    /* 使其高度配合內容所需最小高度 */
     padding: 15px;
     bottom: 0;
 }
@@ -537,4 +511,91 @@ footer {
     text-align: center;
     margin: 5px 0;
     font-size: 10pt;
+}
+
+/*回首頁、搜尋*/
+#searchbtn {
+    position: fixed;
+    /* 設定此按鈕固定定位，使它相對於瀏覽器視窗固定*/
+    bottom: 65px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    /* 移除元素邊框 */
+    border-radius: 50%;
+    /* 圓框 */
+    padding: 10px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+    transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
+}
+
+#searchbtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+#searchBox {
+    display: none;
+    /* 隱藏搜尋盒子 */
+    position: fixed;
+    /* 設定此按鈕固定定位，使它相對於瀏覽器視窗固定*/
+    bottom: 50px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#placeholder {
+    width: 200px;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+#closeSearchBox {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    /* 無邊框外觀 */
+    padding: 8px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+}
+
+#submitSearch {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    /* 無邊框外觀 */
+    padding: 8px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+}
+
+#homeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+    transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
+}
+
+#homeBtn a {
+    text-decoration: none;
+    /* 清除預設超連結樣式 */
+    color: #000;
+}
+
+#homeBtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
 }
