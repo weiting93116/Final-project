@@ -1,13 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
 }
 
 main {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    /* 將main預設寬度設為其容器最大寬度，
+    確保main內容可以隨設備、視窗大小改變 */
 }
 
 body {
@@ -15,17 +15,22 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     min-height: 100vh;
+    /* 使此頁面高度至少為一個視窗的高度 */
 }
 
 .sidebar-container {
     display: none;
+    /* 在>768px的畫面中隱藏側邊選單 */
 }
 
+/* 響應式(螢幕畫面<=768px) */
 @media screen and (max-width: 768px) {
 
     body {
         width: 100vw;
+        /* 確保網頁寬度為視窗寬度 */
     }
 
     .header_list,
@@ -40,7 +45,7 @@ body {
     .web_tags,
     .web_tags a,
     .menu {
-        display: none;
+        display: none; /* 隱藏>768px時的header選單 */
     }
 
     /*header*/
@@ -50,11 +55,12 @@ body {
 
     .sidebar-container {
         width: 100%;
-        position: absolute;
+        position: absolute; /* 絕對定位 */
         top: 5px;
         right: 0;
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
     }
 
     .sidebar-btn {
@@ -66,7 +72,9 @@ body {
         color: white;
         display: flex;
         justify-content: center;
+        /* 對齊父容器垂直中線 */
         align-items: center;
+        /* 水平向上居中對齊 */
     }
 
     .sidebar-btn:hover {
@@ -74,32 +82,41 @@ body {
     }
 
     .sidebar {
-        width: 0;
+        width: 0; /* 側邊選單預設狀態 */
         height: 100%;
         position: fixed;
+        /* 設定側邊選單固定定位，使它相對於瀏覽器視窗固定 */
         top: 0;
         left: 0;
         background-color: #211E1E;
         overflow-x: hidden;
+        /* 選單未開啟時隱藏內容 */
         transition: 0.5s;
+        /* 設定轉場效果，使側邊選單的變化帶有0.5秒的過渡時間 */
         padding-top: 60px;
         z-index: 1;
+        /* 設定側邊選單的堆疊順序(數值越大越上層) */
     }
 
     .sidebar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
+        /* 移除超連結的預設文字底線效果 */
         font-size: 18px;
         color: white;
         display: block;
+        /* 將每個a標籤設為區塊元素(使padding生效) */
         transition: 0.3s;
+        /* 連結的漸變效果 */
     }
 
+    /* 將鼠標放在側邊選單按鈕上背景變色 */
     .sidebar-option:hover {
         background-color: #302d2d;
         color: #211E1E;
     }
 
+    /* 側邊選單的收縮按鈕位置 */
     .sidebar .closebtn {
         position: absolute;
         top: 0;
@@ -110,10 +127,10 @@ body {
 
     .checkout-container {
         width: 100% !important;
+        /* 優先設定(可覆蓋其他width設定) */
     }
 
     /*footer*/
-
     .footer_logo {
         position: relative;
         left: 20%;
@@ -138,8 +155,10 @@ header {
     width: 34%;
     display: flex;
     justify-content: center;
+    /* 子元素在水平向上居中對齊 */
     padding-top: 40px;
     gap: 10px;
+    /* 子元素間距 */
 }
 
 .header_text {
@@ -160,6 +179,7 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50px;
+    /* 使圖片四個角為圓邊 */
 }
 
 .logo_text {
@@ -184,6 +204,7 @@ header {
 
 .header_list a {
     text-decoration: none;
+    /* 清除超連結預設樣式(底線) */
 }
 
 .cart_and_membership img {
@@ -202,20 +223,22 @@ header {
 
 .has-submenu a {
     text-decoration: none;
+    /* 清除超連結預設樣式(底線) */
     color: #fff;
 }
 
 .submenu {
     opacity: 0;
+    /* 預設為透明度0 */
     visibility: hidden;
+    /* 預設為隱藏 */
     background-color: #333;
     color: #d9d9d9;
     position: absolute;
     transition: opacity 0.3s ease-in-out;
-    list-style-type: none;
+    /* 漸變效果 */
     padding: 0;
     margin: 0;
-    z-index: 2;
 }
 
 .submenu li {
@@ -225,6 +248,7 @@ header {
 .has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
+    /* 顯示子選單 */
 }
 
 .submenu a {
@@ -233,6 +257,7 @@ header {
     color: #d9d9d9;
     text-align: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 .submenu a:hover {
@@ -428,76 +453,6 @@ header {
     color: white;
 }
 
-/*回首頁、搜尋*/
-#searchbtn {
-    position: fixed;
-    bottom: 65px;
-    right: 20px;
-    background-color: #d9d9d9;
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-
-#searchBox {
-    display: none;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    background-color: #fff;
-    padding: 10px;
-}
-
-#placeholder {
-    width: 200px;
-    padding: 8px;
-    margin-right: 8px;
-}
-
-#closeSearchBox {
-    background-color: #2e2e2e;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#submitSearch {
-    background-color: #2e2e2e;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#homeBtn {
-
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #d9d9d9;
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-#homeBtn a {
-    text-decoration: none;
-    color: #000;
-}
-
-#homeBtn:hover {
-    background-color: #2e2e2e;
-    color: #fff;
-}
-
 /*FOOTER*/
 footer {
     background-color: #211E1E;
@@ -538,6 +493,94 @@ footer {
 .privacy-policy {
     width: 100%;
     text-align: center;
+    /* 文字置中 */
     margin: 5px 0;
     font-size: 10pt;
+}
+
+/*回首頁、搜尋*/
+#searchbtn {
+    position: fixed;
+    /* 設定此按鈕固定定位，使它相對於瀏覽器視窗固定*/
+    bottom: 65px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    /* 移除元素邊框 */
+    border-radius: 50%;
+    /* 圓框 */
+    padding: 10px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+    transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
+}
+
+#searchbtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+#searchBox {
+    display: none;
+    /* 隱藏搜尋盒子 */
+    position: fixed;
+    /* 設定此按鈕固定定位，使它相對於瀏覽器視窗固定*/
+    bottom: 50px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#placeholder {
+    width: 200px;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+#closeSearchBox {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    /* 無邊框外觀 */
+    padding: 8px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+}
+
+#submitSearch {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    /* 無邊框外觀 */
+    padding: 8px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+}
+
+#homeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
+    transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
+}
+
+#homeBtn a {
+    text-decoration: none;
+    /* 清除預設超連結樣式 */
+    color: #000;
+}
+
+#homeBtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
 }

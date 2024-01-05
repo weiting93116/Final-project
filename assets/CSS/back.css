@@ -1,18 +1,22 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
 }
 
 main {
-    width: 100%;
+    width: 100%; 
+    /* 將main預設寬度設為其容器最大寬度，
+    確保main內容可以隨設備、視窗大小改變 */
 }
 
 section {
     margin: 0;
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     min-height: 100vh;
+    /* 使此頁面高度至少為一個視窗的高度 */
 }
 
 /*header*/
@@ -23,15 +27,16 @@ header {
     color: white;
     position: relative;
     display: flex;
-
 }
 
 .header_list {
-    width: 40%;
+    width: 34%;
     display: flex;
     justify-content: center;
+    /* 子元素在水平向上居中對齊 */
     padding-top: 40px;
     gap: 10px;
+    /* 子元素間距 */
 }
 
 .header_text {
@@ -56,6 +61,7 @@ header a {
     width: 50px;
     height: 50px;
     border-radius: 50px;
+    /* 使圖片四個角為圓邊 */
 }
 
 .logo_text {
@@ -80,6 +86,7 @@ header a {
 
 .header_list a {
     text-decoration: none;
+    /* 清除超連結預設樣式(底線) */
 }
 
 .cart_and_membership img {
@@ -99,17 +106,20 @@ header a {
 
 .has-submenu a {
     text-decoration: none;
+    /* 清除超連結預設樣式(底線) */
     color: #fff;
 }
 
 .submenu {
     opacity: 0;
+    /* 預設為透明度0 */
     visibility: hidden;
+    /* 預設為隱藏 */
     background-color: #333;
     color: #d9d9d9;
     position: absolute;
     transition: opacity 0.3s ease-in-out;
-    list-style-type: none;
+    /* 漸變效果 */
     padding: 0;
     margin: 0;
 }
@@ -121,6 +131,7 @@ header a {
 .has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
+    /* 顯示子選單 */
 }
 
 .submenu a {
@@ -129,6 +140,7 @@ header a {
     color: #d9d9d9;
     text-align: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 .submenu a:hover {
@@ -265,6 +277,7 @@ footer {
     color: white;
     width: 100%;
     height: fit-content;
+    /* 使其高度配合內容所需最小高度 */
     padding: 15px;
     bottom: 0;
 }
@@ -299,6 +312,7 @@ footer {
 .privacy-policy {
     width: 100%;
     text-align: center;
+    /* 文字置中 */
     margin: 5px 0;
     font-size: 10pt;
 }
@@ -306,21 +320,32 @@ footer {
 /*回首頁、搜尋*/
 #searchbtn {
     position: fixed;
+    /* 設定此按鈕固定定位，使它相對於瀏覽器視窗固定*/
     bottom: 65px;
     right: 20px;
     background-color: #d9d9d9;
     color: #000;
     border: none;
+    /* 移除元素邊框 */
     border-radius: 50%;
+    /* 圓框 */
     padding: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
 }
 
+#searchbtn:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+}
 
 #searchBox {
     display: none;
+    /* 隱藏搜尋盒子 */
     position: fixed;
+    /* 設定此按鈕固定定位，使它相對於瀏覽器視窗固定*/
     bottom: 50px;
     right: 20px;
     background-color: #fff;
@@ -337,20 +362,23 @@ footer {
     background-color: #2e2e2e;
     color: #fff;
     border: none;
+    /* 無邊框外觀 */
     padding: 8px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 #submitSearch {
     background-color: #2e2e2e;
     color: #fff;
     border: none;
+    /* 無邊框外觀 */
     padding: 8px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 #homeBtn {
-
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -360,11 +388,14 @@ footer {
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
 }
 
 #homeBtn a {
     text-decoration: none;
+    /* 清除預設超連結樣式 */
     color: #000;
 }
 

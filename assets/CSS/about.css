@@ -45,7 +45,7 @@ main {
         right: 0;
         display: flex;
         flex-direction: column;
-        /* 設定 Flexbox 的主軸方向為垂直，元素的子元素將垂直排列 */
+        /* 使子元素垂直排列 */
     }
 
     .sidebar-btn {
@@ -95,7 +95,7 @@ main {
         /* 連結的漸變效果 */
     }
 
-    /* 將鼠標放在側邊選單按鈕上會有不同特效 */
+    /* 將鼠標放在側邊選單按鈕上背景變色 */
     .sidebar-option:hover {
         background-color: #302d2d;
         color: #211E1E;
@@ -115,14 +115,13 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        /* 在 Flexbox 佈局中，子元素垂直向上均勻分布 */
+        /* 使子元素垂直向上均勻分布 */
         flex-wrap: nowrap;
         /* 子元素不換行 */
         align-items: center;
     }
 
     /*footer*/
-
     .footer_logo {
         position: relative;
         left: 20%;
@@ -424,6 +423,7 @@ footer {
     background-color: #2e2e2e;
     color: #fff;
     border: none;
+    /* 無邊框外觀 */
     padding: 8px;
     cursor: pointer;
     /* 鼠標放在botton上的樣式變動(表示可點擊) */
@@ -433,6 +433,7 @@ footer {
     background-color: #2e2e2e;
     color: #fff;
     border: none;
+    /* 無邊框外觀 */
     padding: 8px;
     cursor: pointer;
     /* 鼠標放在botton上的樣式變動(表示可點擊) */
@@ -455,6 +456,7 @@ footer {
 
 #homeBtn a {
     text-decoration: none;
+    /* 清除預設超連結樣式 */
     color: #000;
 }
 
