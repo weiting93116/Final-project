@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
     font-family: 標楷體;
 }
 
@@ -9,12 +9,14 @@ body {
     font-size: 20px;
 }
 
+/* 響應式(螢幕畫面<=768px) */
 @media screen and (max-width: 1024px) {
 
     .register-container {
         width: 100%;
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
     }
 
     .register-photo {
@@ -27,7 +29,7 @@ body {
 
     .register-text {
         text-align: center;
-        width: 100% !important;
+        width: 100% !important;/* 可以覆蓋其他width設定 */
         background-color: #2e2e2e;
         color: #fff;
     }
@@ -54,20 +56,25 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+    /* 使圖片保持原比例填滿父容器 */
 }
 
 .register-logo img {
     border-radius: 50%;
     max-width: 25%;
     object-fit: cover;
+    /* 使圖片保持原比例填滿父容器 */
     padding: 10px;
 }
 
 .register-logo {
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     align-items: center;
+    /* 水平向上居中對齊 */
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     font-size: 30px;
     padding: 5% 20px 0;
 }
@@ -89,8 +96,11 @@ body {
     margin: 0 auto 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* 使子元素垂直排列 */
     justify-content: space-evenly;
+    /* 首尾元素和父容器的距離相等 */
+    align-items: center;
+    /* 水平向上居中對齊 */
 }
 
 form {
@@ -110,7 +120,9 @@ form p {
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease;
+    /* 鼠標放在botton上後背景變色 */
 }
 
 .submit-btn:hover {
@@ -128,7 +140,9 @@ form p {
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
 }
 
 #homeBtn a {

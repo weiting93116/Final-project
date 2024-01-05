@@ -155,7 +155,7 @@ header {
     width: 34%;
     display: flex;
     justify-content: center;
-    /* 子元素在水平向上居中對齊 */
+    /* 對齊父容器垂直中線 */
     padding-top: 40px;
     gap: 10px;
     /* 子元素間距 */
@@ -287,6 +287,7 @@ header {
 .step-indicator {
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     margin-bottom: 20px;
 }
 
@@ -296,8 +297,10 @@ header {
     background-color: #ddd;
     border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
+    align-items: center;
+    /* 水平向上居中對齊 */ 
     margin: 0 20px;
     font-size: 16px;
 }
@@ -316,6 +319,7 @@ header {
     padding: 7px;
     display: flex;
     justify-content: space-around;
+    /* 向上均勻分布 */
 }
 
 .carts-items {
@@ -326,8 +330,10 @@ header {
 .carts-item {
     height: 100px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    /* 向上均勻分布 */
+    align-items: center;
+    /* 水平向上居中對齊 */ 
     padding: 10px 0;
 }
 
@@ -337,14 +343,18 @@ header {
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
+    /* 使子元素之間的距離相等 */
 }
 
 
 .cart-item {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    /* 子元素不換行 */
     justify-content: space-between;
+    /* 使子元素之間的距離相等 */
+    align-items: center;
+    /* 水平向上居中對齊 */ 
     width: 100%;
     padding: 0 8% 0 5%;
 }
@@ -352,7 +362,9 @@ header {
 .cart-item-name {
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     align-items: center;
+    /* 水平向上居中對齊 */ 
 }
 
 .cart-item img {
@@ -377,6 +389,7 @@ header {
 .button {
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
 }
 
 .cart-btn {
@@ -416,6 +429,7 @@ header {
     padding: 10px;
     width: 80%;
     height: fit-content;
+    /* 使其高度配合內容所需最小高度 */
     margin: 10px auto 50px;
     border-style: solid;
 }
@@ -443,6 +457,7 @@ header {
 .check-order-infor {
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     padding-top: 5%;
     gap: 20px;
 }
@@ -459,6 +474,7 @@ footer {
     color: white;
     width: 100%;
     height: fit-content;
+    /* 使其高度配合內容所需最小高度 */
     padding: 15px;
     margin-top: auto;
 }
