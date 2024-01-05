@@ -1,13 +1,15 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
 }
 
 .sidebar-container {
     display: none;
+    /* 在>768px的畫面中隱藏側邊選單 */
 }
 
+/* 響應式(螢幕畫面<=768px) */
 @media screen and (max-width: 768px) {
 
     .header_list,
@@ -22,7 +24,7 @@
     .web_tags,
     .web_tags a,
     .menu {
-        display: none;
+        display: none; /* 隱藏>768px時的header選單 */
     }
 
     /*header*/
@@ -32,11 +34,12 @@
 
     .sidebar-container {
         width: 100%;
-        position: absolute;
+        position: absolute; /* 絕對定位 */
         top: 5px;
         right: 0;
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
     }
 
     .sidebar-btn {
@@ -48,7 +51,9 @@
         color: white;
         display: flex;
         justify-content: center;
+        /* 對齊父容器垂直中線 */
         align-items: center;
+        /* 水平向上居中對齊 */
     }
 
     .sidebar-btn:hover {
@@ -56,32 +61,41 @@
     }
 
     .sidebar {
-        width: 0;
+        width: 0; /* 側邊選單預設狀態 */
         height: 100%;
         position: fixed;
+        /* 設定側邊選單固定定位，使它相對於瀏覽器視窗固定 */
         top: 0;
         left: 0;
         background-color: #211E1E;
         overflow-x: hidden;
+        /* 選單未開啟時隱藏內容 */
         transition: 0.5s;
+        /* 設定轉場效果，使側邊選單的變化帶有0.5秒的過渡時間 */
         padding-top: 60px;
         z-index: 1;
+        /* 設定側邊選單的堆疊順序(數值越大越上層) */
     }
 
     .sidebar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
+        /* 移除超連結的預設文字底線效果 */
         font-size: 18px;
         color: white;
         display: block;
+        /* 將每個a標籤設為區塊元素(使padding生效) */
         transition: 0.3s;
+        /* 連結的漸變效果 */
     }
 
+    /* 將鼠標放在側邊選單按鈕上背景變色 */
     .sidebar-option:hover {
         background-color: #302d2d;
         color: #211E1E;
     }
 
+    /* 側邊選單的收縮按鈕位置 */
     .sidebar .closebtn {
         position: absolute;
         top: 0;
@@ -91,7 +105,7 @@
     }
 
     /*body*/
-
+    /* !important 為優先設定 */
     .Product {
         width: 100% !important;
     }
@@ -99,6 +113,7 @@
     .product-container {
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
         gap: 20px !important;
 
     }
@@ -114,6 +129,7 @@
 
     .tab-content p {
         flex-direction: row !important;
+        /* 使子元素水平排列 */
     }
 
     .slideshow-container {
@@ -131,7 +147,6 @@
     }
 
     /*footer*/
-
     .footer_logo {
         position: relative;
         left: 20%;
@@ -157,8 +172,10 @@ header {
     width: 34%;
     display: flex;
     justify-content: center;
+    /* 子元素在水平向上居中對齊 */
     padding-top: 40px;
     gap: 10px;
+    /* 子元素間距 */
 }
 
 .header_text {
@@ -169,6 +186,7 @@ header {
 
 li {
     list-style: none;
+    /* 清除預設清單編號樣式 */
 }
 
 .logo {
@@ -183,6 +201,7 @@ li {
     width: 50px;
     height: 50px;
     border-radius: 50px;
+    /* 使圖片四個角為圓邊 */
 }
 
 .logo_text {
@@ -207,6 +226,7 @@ li {
 
 .header_list a {
     text-decoration: none;
+    /* 清除超連結預設樣式(底線) */
 }
 
 .cart_and_membership img {
@@ -226,17 +246,20 @@ li {
 
 .has-submenu a {
     text-decoration: none;
+    /* 清除超連結預設樣式(底線) */
     color: #fff;
 }
 
 .submenu {
     opacity: 0;
+    /* 預設為透明度0 */
     visibility: hidden;
+    /* 預設為隱藏 */
     background-color: #333;
     color: #d9d9d9;
     position: absolute;
     transition: opacity 0.3s ease-in-out;
-    list-style-type: none;
+    /* 漸變效果 */
     padding: 0;
     margin: 0;
 }
@@ -248,6 +271,7 @@ li {
 .has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
+    /* 顯示子選單 */
 }
 
 .submenu a {
@@ -256,6 +280,7 @@ li {
     color: #d9d9d9;
     text-align: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 .submenu a:hover {
@@ -267,7 +292,9 @@ li {
 main {
     display: flex;
     justify-content: center;
+    /* 子元素呈水平向上居中對齊 */
     align-items: center;
+    /* 子元素呈垂直向上居中對齊 */
 }
 
 
@@ -275,6 +302,7 @@ main {
     width: 90%;
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
 }
 
 
@@ -285,11 +313,13 @@ section {
 .product-container {
     display: flex;
     justify-content: center;
+    /* 子元素呈水平向上居中對齊 */
 }
 
 #gallery,
 .product-details {
     flex: 1;
+    /* 平均佔據空間(1:1) */
 }
 
 .product-details {
@@ -298,8 +328,10 @@ section {
 
 #gallery {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    /* 使子元素垂直排列 */
+    align-items: center;
+    /* 子元素呈垂直向上居中對齊 */
 }
 
 
@@ -308,6 +340,7 @@ section {
     width: 300px;
     height: 300px;
     overflow: hidden;
+    /* 隱藏超出父容器的部分 */
     margin-bottom: 20px;
 }
 
@@ -319,7 +352,9 @@ section {
 #thumbnails {
     display: flex;
     justify-content: space-between;
+    /* 使子元素垂直向上均勻分布 */
     align-items: center;
+    /* 子元素呈垂直向上居中對齊 */
     gap: 5px;
 }
 
@@ -327,23 +362,27 @@ section {
     width: 50px;
     height: 50px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 #prev-button,
 #next-button {
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 
 .quantity-container {
     display: flex;
     align-items: center;
+    /* 子元素呈垂直向上居中對齊 */
 }
 
 .quantity-btn {
     font-size: 20px;
     width: 23px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     background-color: rgb(91, 86, 86);
     color: aliceblue;
 }
@@ -369,6 +408,7 @@ section {
     padding: 20px;
     display: flex;
     justify-content: center;
+    /* 使子元素垂直向上均勻分布 */
 }
 
 .buy-btn,
@@ -385,12 +425,13 @@ section {
 .buy-btn:hover,
 .cart-btn:hover {
     animation: blink 0.5s infinite alternate;
+    /* 鼠標停留在此兩按鈕時的閃爍特效   */
 }
 
 @keyframes blink {
     to {
         opacity: 0.5;
-        /* 闪烁时的透明度 */
+        /* 閃爍時的透明度 */
     }
 }
 
@@ -407,20 +448,27 @@ section {
 
 .tab-title li {
     display: inline-block;
+    /* 元素不換行並佔據一個區塊 */
     margin-right: 10px;
 }
 
 .tab-title a {
     display: inline-block;
+    /* 元素不換行並佔據一個區塊 */
     padding: 10px 20px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     color: white;
     font-size: 16px;
     font-weight: bold;
+    /* 字體粗度 */
     border-radius: 3px;
+    /* 邊角修圓 */
     background-color: #535050;
     transition: background-color 0.3s;
+    /* 漸變效果 */
     text-decoration: none;
+    /* 清出超連結預設樣式 */
 }
 
 .tab-title a:hover {
@@ -536,8 +584,10 @@ section {
 
 .product:hover {
     transform: scale(1.05);
+    /* 鼠標放到圖片上時的放大效果 */
 }
 
+/* 淡入方式由下而上出現 */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -555,12 +605,16 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    /* 向上平移自身高度50%的距離 */
     width: auto;
     padding: 15px;
     color: black;
     border-radius: 3px;
+    /* 圓框 */
     border: transparent solid 1px;
+    /* 設定邊框樣式 */
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 .prev {
@@ -580,9 +634,12 @@ section {
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+    /* 動畫時間 */
     justify-content: center;
+    /* 垂直置中對齊 */
 }
 
+/* fade透明度調整 */
 @keyframes fade {
     0% {
         opacity: 0.4;
@@ -600,18 +657,20 @@ section {
     color: #fff;
     padding: 5px 10px;
     border: none;
+    /* 清除邊框 */
     border-radius: 5px;
+    /* 圓邊 */
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 .add-to-cart-btn:hover {
     background-color: #7c7572;
 }
 
-/*、搜尋*/
+/* 回首頁 */
 
 #homeBtn {
-
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -621,11 +680,14 @@ section {
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 鼠標放在botton上後背景變色 */
 }
 
 #homeBtn a {
     text-decoration: none;
+    /* 清除預設超連結樣式 */
     color: #000;
 }
 
