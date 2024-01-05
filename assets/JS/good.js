@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       selectedTab.classList.add('active');
     }
   
-  
+    
   //評論星數
   // 假設這是你的留言評價數據
   const totalStars = 5; // 總計星數
