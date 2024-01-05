@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除預設邊緣空間 */
+    padding: 0; /* 清除預設內邊距 */
+    box-sizing: border-box; /* 避免不同瀏覽器對元素預覽樣式不同 */
 }
 
 a {
@@ -15,7 +15,9 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     align-items: center;
+    /* 水平向上居中對齊 */
     background-color: #211E1E;
 }
 
@@ -23,8 +25,11 @@ header {
 .logo-text {
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     align-items: center;
+    /* 水平向上居中對齊 */
     color: white;
     opacity: 0;
     transform: translateY(-100px);
@@ -62,6 +67,7 @@ header {
 #mainNav {
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     padding: 10px;
     background-color: #211E1E;
     width: 100%;
@@ -84,6 +90,7 @@ header {
     right: 0;
     display: flex;
     align-items: center;
+    /* 水平向上居中對齊 */
     margin-right: 20px;
 }
 
@@ -113,7 +120,9 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     align-items: center;
+    /* 水平向上居中對齊 */
     padding: 20px;
     background-color: #211E1E;
 }
@@ -153,6 +162,7 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    /* 漸變效果 */
     display: block;
     overflow: visible;
     z-index: 100;
@@ -193,6 +203,7 @@ header {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    /* 漸變效果 */
 }
 
 .slide {
@@ -220,6 +231,7 @@ header {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
 }
 
 .carousel-controls label {
@@ -230,7 +242,9 @@ header {
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 
@@ -263,7 +277,9 @@ header {
 .card-container {
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     align-items: center;
+    /* 水平向上居中對齊 */
     flex-direction: row;
     padding: 20px;
     gap: 100px;
@@ -282,31 +298,42 @@ header {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     align-items: center;
+    /* 水平向上居中對齊 */
     background-image: url('../image/bgggg.jpg');
     background-size: cover;
+    /* 等比例縮放 */
     background-position: center;
+    /* 圖片置中，多餘部分切掉 */
     transition: transform 0.5s ease-in-out;
+    /* 漸變效果 */
 }
 
 
 .card:hover {
     transform: scale(1.1);
+    /* 放大效果 */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /* 陰影效果 */
 }
 
 .card:not(:hover) {
     animation: floatAnimation 3s infinite alternate;
+    /* 過渡效果(上下晃動) */
 }
 
 @keyframes floatAnimation {
     0% {
         transform: translateY(0);
+        /* 設置初始位置 */
     }
 
     100% {
         transform: translateY(-10px);
+        /* 向上移動10px */
     }
 }
 
@@ -324,7 +351,9 @@ header {
     height: 50px;
     width: 150px;
     transition: background-color 0.3s ease;
+    /* 漸變效果 */
     align-items: center;
+    /* 水平向上居中對齊 */
 }
 
 .find-tea-btn:hover {
@@ -357,8 +386,11 @@ header {
     width: 100%;
     background-image: url('../image/about.jpg');
     background-size: cover;
+    /* 等比例縮放 */
     background-position: center 50%;
+    /* 使圖片中心對齊父容器垂直的50% */
     backdrop-filter: blur(10px);
+    /* 模糊背景 */
     padding: 20px;
 }
 
@@ -368,6 +400,7 @@ header {
     font-weight: bolder;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* 設置陰影 */
     padding: 20px;
 }
 
@@ -377,8 +410,10 @@ header {
     font-weight: bold;
     text-align: left;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+    /* 使內容對齊父容器水平結尾 */
     line-height: 2;
+    /* 行距 */
     margin: 5% 10% 4%;
 }
 
@@ -390,6 +425,7 @@ header {
     width: 150px;
     margin-left: 35%;
     transition: background-color 0.3s ease;
+    /* 漸變效果 */
 }
 
 .about-us-btn:hover {
@@ -416,7 +452,9 @@ header {
 .product-list {
     display: flex;
     justify-content: space-around;
+    /* 使子元素間間距相等，首尾也有一半的間距 */
     align-items: flex-start;
+    /* 頂部對齊 */
     margin: 0 5%;
 }
 
@@ -431,6 +469,7 @@ header {
     box-sizing: border-box;
     max-height: 600px;
     overflow: hidden;
+    /* 隱藏溢出的內容 */
     max-width: 400px;
 }
 
@@ -455,10 +494,12 @@ header {
 
 .product {
     transition: transform 0.3s;
+    /* 漸變效果 */
 }
 
 .product:hover {
     transform: scale(1.1);
+    /* 放大效果 */
 }
 
 .add-to-cart-btn {
@@ -468,8 +509,10 @@ header {
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    /* 漸變效果 */
 }
 
 .add-to-cart-btn:hover {
@@ -497,6 +540,7 @@ header {
 .tea-set-container {
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     margin-top: 20px;
 }
 
@@ -505,20 +549,26 @@ header {
 .tea-tool {
     display: flex;
     flex-direction: column;
+    /* 使子元素垂直排列 */
     align-items: center;
+    /* 水平向上居中對齊 */
     padding: 20px;
     margin: 20px;
     transition: transform 0.3s ease;
+    /* 漸變效果 */
     animation: floatAnimation 2s infinite alternate;
+    /* 動畫效果 */
 }
 
 @keyframes floatAnimation {
     0% {
         transform: translateY(0);
+        /* 初始位置 */
     }
 
     100% {
         transform: translateY(-30px);
+        /* 向上移動 */
     }
 }
 
@@ -526,8 +576,10 @@ header {
 .tea-cup:hover,
 .tea-tool:hover {
     transform: scale(1.1);
+    /* 放大效果 */
     animation: none;
     transition: transform 0.3s ease;
+    /* 漸變效果 */
 }
 
 
@@ -542,7 +594,9 @@ header {
 .teaset-us-btn {
     display: flex;
     justify-content: center;
+    /* 對齊父容器垂直中線 */
     align-items: center;
+    /* 水平向上居中對齊 */
     transform: translateX(-50%);
     margin-bottom: 50px;
     background-color: #5e5858;
@@ -552,7 +606,9 @@ header {
     width: 150px;
     position: relative;
     left: calc(50% + 10px);
+    /* 水平居中並向右偏移10px */
     transition: background-color 0.3s ease;
+    /* 漸變效果 */
 }
 
 .teaset-us-btn a {
@@ -605,7 +661,9 @@ iframe {
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 
@@ -630,6 +688,7 @@ iframe {
     border: none;
     padding: 8px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 #submitSearch {
@@ -638,6 +697,7 @@ iframe {
     border: none;
     padding: 8px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
 }
 
 #topBtn {
@@ -651,7 +711,9 @@ iframe {
     border-radius: 50%;
     padding: 10px 15px;
     cursor: pointer;
+    /* 鼠標放在botton上的樣式變動(表示可點擊) */
     transition: background-color 0.3s ease-in-out;
+    /* 漸變效果 */
 }
 
 #topBtn a {
@@ -717,6 +779,7 @@ li {
     display: none;
 }
 
+/* 響應式(螢幕畫面<=768px) */
 @media screen and (max-width: 768px) {
 
     .header_list,
@@ -731,7 +794,7 @@ li {
     .web_tags,
     .web_tags a,
     .menu {
-        display: none;
+        display: none; /* 隱藏>768px時的header選單 */
     }
 
 
@@ -741,6 +804,7 @@ li {
         right: 0;
         display: flex;
         flex-direction: column;
+        /* 使子元素垂直排列 */
     }
 
     .sidebar-btn {
@@ -753,7 +817,9 @@ li {
         margin-right: 20px;
         display: flex;
         justify-content: center;
+        /* 對齊父容器垂直中線 */
         align-items: center;
+        /* 水平向上居中對齊 */
     }
 
     .sidebar-btn:hover {
@@ -764,29 +830,38 @@ li {
         width: 0;
         height: 100%;
         position: fixed;
+        /* 設定側邊選單固定定位，使它相對於瀏覽器視窗固定 */
         top: 0;
         left: 0;
         background-color: #211E1E;
         overflow-x: hidden;
+        /* 選單未開啟時隱藏內容 */
         transition: 0.5s;
+        /* 設定轉場效果，使側邊選單的變化帶有0.5秒的過渡時間 */
         padding-top: 60px;
         z-index: 1;
+        /* 設定側邊選單的堆疊順序(數值越大越上層) */
     }
 
     .sidebar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
+        /* 移除超連結的預設文字底線效果 */
         font-size: 18px;
         color: white;
         display: block;
+        /* 將每個a標籤設為區塊元素(使padding生效) */
         transition: 0.3s;
+        /* 連結的漸變效果 */
     }
 
+    /* 將鼠標放在側邊選單按鈕上背景變色 */
     .sidebar-option:hover {
         background-color: #302d2d;
         color: #211E1E;
     }
 
+    /* 側邊選單的收縮按鈕位置 */
     .sidebar .closebtn {
         position: absolute;
         top: 0;
@@ -889,6 +964,7 @@ li {
         margin: 10px;
         max-height: 300px;
         overflow: visible;
+        /* 允許內容溢出 */
         max-width: 200px;
     }
 
@@ -906,6 +982,7 @@ li {
     .tea-cup,
     .tea-tool {
         flex-direction: column-reverse;
+        /* 從底部向上排列 */
         padding: 10px;
         margin: 10px;
     }
@@ -920,7 +997,6 @@ li {
     .tea-set-container p {
         font-size: 25px;
         line-height: 1.2;
-        order: 2;
         margin: 10%;
     }
 

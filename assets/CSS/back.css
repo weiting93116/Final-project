@@ -47,6 +47,7 @@ header {
 
 header a {
     text-decoration: none;
+    /* 清除超連結預約樣式 */
 }
 
 .logo {
