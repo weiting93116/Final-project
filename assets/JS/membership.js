@@ -1,5 +1,6 @@
 // script.js
 
+// 切換編輯模式
 function toggleEditMode() {
     const personalInfo = document.getElementById('personalInfo');
     const editForm = document.getElementById('editForm');
@@ -17,6 +18,7 @@ function toggleEditMode() {
     editForm.style.display = 'block';
 }
 
+// 儲存變更
 function saveChanges() {
     const personalInfo = document.getElementById('personalInfo');
     const editForm = document.getElementById('editForm');
@@ -40,6 +42,7 @@ function saveChanges() {
     editForm.style.display = 'none';
 }
 
+// 搜尋按鈕及搜尋框顯示/隱藏
 document.addEventListener("DOMContentLoaded", function() {
     var searchBtn = document.getElementById("searchbtn");
     var searchBox = document.getElementById("searchBox");

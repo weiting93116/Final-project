@@ -82,11 +82,13 @@ function addToCart(productName) {
     alert('已將商品 ' + productName + ' 加入購物車！');
 }
 
-//totop
+// 回到頂部按鈕
 document.addEventListener("DOMContentLoaded", function() {
   var topBtn = document.getElementById("topBtn");
 
+  // 滾動事件監聽器
   window.onscroll = function() {
+      // 當滾動高度超過 20 像素時顯示回到頂部按鈕，否則隱藏
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           topBtn.style.display = "block";
       } else {
@@ -94,11 +96,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   };
 
+  // 回到頂部按鈕點擊事件
   topBtn.addEventListener("click", function() {
+      // 滾動到頂部
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
   });
 });
+
 
 //search
 document.addEventListener("DOMContentLoaded", function() {

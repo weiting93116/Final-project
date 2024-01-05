@@ -13,21 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function showTab(tabId) {
-    // Hide all content divs
+    // 隱藏所有內容 div
     var contentDivs = document.querySelectorAll('.content');
     contentDivs.forEach(function (div) {
         div.style.display = 'none';
     });
 
-    // Show the selected tab content
+    // 顯示選中的選項卡內容
     document.getElementById(tabId).style.display = 'block';
 }
 
 function addToCart(productName) {
-
     alert('已加入購物車！\n產品：' + productName);
 }
-
 
 //搜尋
 document.addEventListener("DOMContentLoaded", function() {
