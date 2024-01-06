@@ -68,7 +68,7 @@ header {
     display: flex;
     justify-content: center;
     /* 對齊父容器垂直中線 */
-    padding: 10px;
+    padding: 20px;
     background-color: #211E1E;
     width: 100%;
 }
@@ -91,7 +91,7 @@ header {
     display: flex;
     align-items: center;
     /* 水平向上居中對齊 */
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .cartnav,
@@ -99,6 +99,7 @@ header {
 .fixed .cartnav,
 .fixed .membershipnav {
     display: flex;
+    margin: 10px;
 }
 
 .cart_and_membership>div,
@@ -111,6 +112,14 @@ header {
     margin: 0;
     font-size: 14px;
     color: white;
+}
+
+.cartnav img,
+.membershipnav img,
+.fixed .cartnav img,
+.fixed .membershipnav img {
+    display: flex;
+    margin-right: 10px;
 }
 
 .fixed {
@@ -131,7 +140,6 @@ header {
     text-decoration: none;
     font-size: 16px;
     color: white;
-    margin-right: 20px;
 }
 
 .menu ul {
